@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Settings, Play, Plus, Trash2, Edit3, Loader2, CheckCircle2, PlaySquare, Download } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { buildPrompt1, buildPrompt2, buildPrompt3, buildPrompt4, buildPrompt5, getSystemPromptWeb, WEB_CONTENT_TYPES } from '../lib/prompts';
@@ -42,7 +42,8 @@ export default function Dashboard() {
   const [newKnowledgeBase, setNewKnowledgeBase] = useState('');
   const [reviewTask, setReviewTask] = useState<ArticleTask | null>(null);
   const [isProcessingAll, setIsProcessingAll] = useState(false);
-  
+  const runningTasksRef = useRef<Set<string>>(new Set());
+  const isProcessAllRef = useRef<boolean>(false);
   useEffect(() => {
     const savedConfig = localStorage.getItem('vertex_config');
     if (savedConfig) setConfig(JSON.parse(savedConfig));
@@ -131,9 +132,22 @@ export default function Dashboard() {
   };
 
   const runTask = async (id: string) => {
+    if (runningTasksRef.current.has(id)) return; // Prevent double trigger race-condition
+    runningTasksRef.current.add(id);
+
     const currentTasks = JSON.parse(localStorage.getItem('article_tasks') || '[]') as ArticleTask[];
     const task = currentTasks.find(t => t.id === id);
-    if (!task) return;
+    if (!task) {
+      runningTasksRef.current.delete(id);
+      return;
+    }
+    
+    // Check localstorage state rigidly directly upon invocation
+    if (task.status === 'running') {
+      runningTasksRef.current.delete(id);
+      return; 
+    }
+
     updateTaskState(id, { status: 'running', errorMsg: '' });
 
     try {
@@ -222,19 +236,29 @@ export default function Dashboard() {
 
     } catch (error: unknown) {
       updateTaskState(id, { status: 'error', errorMsg: (error as Error).message });
+    } finally {
+      runningTasksRef.current.delete(id);
     }
   };
 
   const runAllPending = async () => {
+    if (isProcessAllRef.current) return;
+    isProcessAllRef.current = true;
     setIsProcessingAll(true);
-    const currentTasks = JSON.parse(localStorage.getItem('article_tasks') || '[]') as ArticleTask[];
+    try {
+      const currentTasks = JSON.parse(localStorage.getItem('article_tasks') || '[]') as ArticleTask[];
     const pendingTasks = currentTasks.filter(t => (t.status === 'idle' || t.status === 'error') && t.platform === newPlatform);
     
     for (const task of pendingTasks) {
-      await runTask(task.id);
-      await delay(8000); // Wait a bit before starting next task to cool down APIs
+      if (!runningTasksRef.current.has(task.id)) {
+        await runTask(task.id);
+        await delay(8000); // Wait a bit before starting next task to cool down APIs
+      }
     }
-    setIsProcessingAll(false);
+    } finally {
+      setIsProcessingAll(false);
+      isProcessAllRef.current = false;
+    }
   };
 
   const exportToExcel = () => {
