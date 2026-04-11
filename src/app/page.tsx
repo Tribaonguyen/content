@@ -157,7 +157,7 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptWeb(task.knowledgeBase);
 
         updateTaskState(id, { currentStep: 1 });
-        // Bật Google Search cho Bước 1 để lấy dữ liệu thực từ internet
+        // Bật Google Search để lấy dữ liệu thực từ internet cho bước phác thảo
         const step1Text = await callVertexAI(sysPrompt, buildPrompt1(task.topic, task.contentType || '', task.audience), 0, true);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
@@ -185,7 +185,7 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptFB(task.audience, task.knowledgeBase);
         
         updateTaskState(id, { currentStep: 1 });
-        // Bật Google Search cho Bước 1 để lấy dữ liệu BĐS thực từ internet
+        // Bật Google Search để lấy dữ liệu BĐS thực từ internet
         const step1Text = await callVertexAI(sysPrompt, buildPrompt1FB(task.topic, task.contentType || ''), 0, true);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
@@ -213,7 +213,7 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptPH(task.audience, task.knowledgeBase);
         
         updateTaskState(id, { currentStep: 1 });
-        // Bật Google Search cho Bước 1 để lấy dữ liệu BĐS thực từ internet
+        // Bật Google Search để lấy dữ liệu BĐS thực từ internet
         const step1Text = await callVertexAI(sysPrompt, buildPrompt1PH(task.topic, task.contentType || ''), 0, true);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
