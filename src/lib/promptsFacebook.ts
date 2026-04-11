@@ -152,6 +152,11 @@ export function buildPrompt1FB(topic: string, contentTypeCode: string) {
 - Chủ đề: "${topic}"
 - Độ dài dự kiến: ${CAPTION_GUIDE[spec.caption]}
 
+QUY TẮc CỐT LÕI - ĐỌC KỸ TRƯỚC KHI VIẾT:
+1. Chủ đề "${topic}" là NHÂN VẬT CHÍNH của bài. Bài viết PHẢI nói về nó — không được thay bằng ngõ khác dù rất liên quan.
+2. Nếu chủ đề có con số (VD: "5 mẫu", "3 cách", "4 lý do"): PHẢI liệt kê ĐỦ số lượng đó với nội dung phân biệt nhau. Tuyệt đối KHÔNG còn lưới mà gộp lại hoặc viết chung chung.
+3. Góc nhìn thương hiệu (dòng tiền, PCCC, tiến độ) chỉ được xuất hiện như lớp kết nối phụ ơ cuối mỗi điểm — KHÔNG được thay thế nội dung chính.
+
 ${getFrameworkFB(contentTypeCode)}
 
 YÊU CẦU BỔ SUNG:
