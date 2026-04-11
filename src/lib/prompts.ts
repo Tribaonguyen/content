@@ -10,7 +10,7 @@ export const WEB_CONTENT_TYPES = [
 function getBrandVoiceBlock() {
   return `
 [BRAND VOICE – XÂY NHÀ TỐC ĐỘ]
-- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách → viết "Anh chị" (KHÔNG dùng gạch chéo "Anh/Chị"). TUYỆT ĐỐI không dùng "em", "mình", "bạn".
+- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách hàng → xưng hô là "Anh chị". TUYỆT ĐỐI CẤM gõ cụm có dấu gạch chéo. KHÔNG dùng "em", "mình", "bạn".
 - Giọng điệu: Thân thiện, gần gũi, vui vẻ — như người bạn chuyên môn đang tư vấn thật lòng. Trực diện nhưng không gắt, không cảnh báo đe dọa. Nói bằng số thực tế (tiền – thời gian – lợi ích). Không hoa mỹ, không đạo lý.
 - Cam kết cốt lõi: Không phát sinh chi phí | Đúng tiến độ | Chuẩn pháp lý PCCC.`.trim();
 }
@@ -42,6 +42,7 @@ ${getBrandVoiceBlock()}
 - Tập trung vào: Hình ảnh thành công → Cơ hội → Cam kết → CTA rõ ràng.
 
 [BLACKLIST TỪ VỰNG & ANTI-AI SMELL - ÉP TUYỆT ĐỐI]
+- TỪ VỰNG TIÊU CỰC CẤM DÙNG: "ác mộng", "chết người", "đòn chí mạng", "đốt tiền", "cỗ máy lỗ", "hủy diệt", "bóc phốt", "phá sản", "sập tiệm", "lừa đảo". Thay bằng: "rủi ro sụt giảm doanh thu", "sai lầm kỹ thuật", "chi phí phát sinh".
 - TỪ VỰNG & CỤM TỪ BỊ CẤM TUYỆT ĐỐI KHÔNG DÙNG DÙ ĐỂ TRONG NGOẶC KÉP: "bọn nó", "tụi nó", "thằng", "vẽ vời", "vẽ", "múa", "tiền ngu", "bài học xương máu".
 - CÁCH ĐỔI TỪ: Thay "bọn nó/tụi nó" -> "bên thứ ba/các đơn vị nhà thầu". Thay "tiền ngu" -> "chi phí cơ hội/khoản lỗ". Thay "vẽ/múa" -> "phát sinh chi phí/hạn chế rủi ro". Thay "bài học xương máu" -> "kinh nghiệm đắt giá/đúc kết".
 - Tuyệt đối KHÔNG viết theo hướng công kích, chỉ trích cá nhân hoặc nhóm đối tượng cụ thể (nhà thầu khác, thợ, môi giới...). Nếu đề cập rủi ro: nói về TÌNH HUỐNG, QUY TRÌNH hoặc HỆ THỐNG, không phải về Con Người.
@@ -92,10 +93,16 @@ QUY TẮC YOAST BẮT BUỘC TRONG DÀN Ý:
 - Không dùng giọng thụ động (passive voice) quá 10% số câu.
 
 ━━━ GIA TĂNG GIÁ TRỊ THỰC CHIẾN (BẮT BUỘC NHƯNG VẪN ĐẢM BẢO SEO) ━━━
-BẮT BUỘC trộn và lồng ghép LỰA CHỌN PHÙ HỢP tự động (1, 2 hoặc 3) trong số các yếu tố sau vào cấu trúc các thẻ H2/H3 (Ghi chú rõ yếu tố được chọn trong dàn ý và đảm bảo tiêu đề H3 vẫn chứa Từ khóa SEO):
-1. [Data / Mini Case Study]: Đưa ra một bảng biểu so sánh hoặc số liệu thực tế (VD: Bảng so sánh chi phí, lợi nhuận trước/sau). Rất hợp bài Phân tích/Commercial.
-2. [Checklist Thực Hành]: Góc tổng hợp 3-5 bước actionable để khách hàng có thể copy/lưu về áp dụng ngay (VD: Checklist 5 bước nghiệm thu). Rất hợp bài Blog/Tips.
-3. [Góc Hỏi Khó - Chuyên Gia Đáp (F.A.Q)]: Nêu ra 1-2 câu hỏi mà chủ đầu tư sợ nhất/hay bị qua mặt nhất và trả lời trực diện theo góc nhìn Lời khuyên, không hù dọa. Thay thế cho FAQ truyền thống nhạt nhẽo.
+${
+    contentType === "Bài Blog / Chia sẻ kiến thức"
+      ? "BẮT BUỘC phải tạo 1 thẻ H2 hoặc H3 có cấu trúc: [Checklist Thực Hành: Tiêu đề]. Liệt kê 3-5 bước actionable để khách hàng copy/lưu về áp dụng ngay."
+      : contentType === "Bài Dịch vụ / Cấu trúc Sale Page" || contentType === "Bài Phân tích / Pháp lý, Quy hoạch"
+      ? "BẮT BUỘC phải tạo 1 thẻ H2 có cấu trúc: [Góc Hỏi Khó - Chuyên Gia Đáp]. Nêu ra 1-2 câu hỏi mà chủ đầu tư sợ nhất/hay bị qua mặt nhất và trả lời trực diện theo góc nhìn Lời khuyên, không hù dọa."
+      : contentType === "Bài Dự án / Case Study thi công"
+      ? "BẮT BUỘC phải tạo 1 thẻ H2 chứa [Data / Bảng biểu tổng quát]. Đưa ra bảng đánh giá hiệu quả trước/sau hoặc bảng tóm tắt thông số dự án."
+      : "BẮT BUỘC chèn 1 Checklist kinh nghiệm hoặc 1 mục F.A.Q Hỏi Đáp ngắn ở cuối bài."
+}
+Đảm bảo tiêu đề H2/H3 của phần Gia Tăng Giá Trị này vẫn chứa Từ khóa SEO phụ.
 
 ━━━ GÓC NHÌN GỢI Ý (CHỌN 1 GÓC NHÌN XUYÊN SUỐT) ━━━
 - GÓC NHÌN CHUYÊN GIA THI CÔNG: Tiêu chuẩn kỹ thuật, vật liệu, quy trình nghiệm thu.
@@ -211,11 +218,11 @@ CHỈ LẤY PHẦN "[BÀI VIẾT HOÀN CHỈNH]" và tối ưu theo CHECKLIST YO
 
 ━━━ HÀNH ĐỘNG BẮT BUỘC ━━━
 1. Sửa trực tiếp bài viết theo tất cả checklist trên.
-2. Thêm 2 gợi ý [INTERNAL LINK] và 1 gợi ý [OUTBOUND LINK] vào đúng vị trí trong bài.
+2. Tạo cấu trúc để người biên tập chèn link. TUYỆT ĐỐI KHÔNG liệt kê link ở mục Meta râu ria. Phải chèn trực tiếp vào văn bản bằng cấu trúc: "[Chèn link nội bộ bài viết về X tại đây]".
 3. Đảm bảo keyphrase xuất hiện tự nhiên đủ mật độ (không nhồi nhét). Dù viết Bảng biểu hay Checklist cũng phải tuần thủ Yoast (câu < 20 chữ, dùng từ nối dẫn dắt).
-4. KIỂM TRA XƯNG HÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) → "Anh chị". Không đổi "chúng tôi".
+4. KIỂM TRA XƯNG HÔ: Đảm bảo khách hàng được gọi là "Anh chị". Không đổi "chúng tôi". TUYỆT ĐỐI CẤM gõ cụm có dấu gạch chéo giữa Anh và Chị.
 5. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
-   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Tự động kiểm tra và XÓA SẠCH mọi từ ngữ đe dọa, tiêu cực quá mức (VD: mất tiền oan, lừa đảo, sập tiệm).
+   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Tự động kiểm tra và XÓA SẠCH mọi từ ngữ đe dọa, tiêu cực giật gân (VD: ác mộng, phá sản, chết người, hủy diệt).
    - Xóa bỏ hoàn toàn mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng", "vẽ vời"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
    - Kiểm tra kỹ các đoạn Pain Point (nỗi đau) ở phần SALE: Đảm bảo nó được trình bày văn minh dạng "Nhận định chuyên môn" và LẬP TỨC kèm Giải pháp trị liệu, triệt tiêu sự lo âu.
 
