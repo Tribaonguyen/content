@@ -157,8 +157,10 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptWeb(task.knowledgeBase);
 
         updateTaskState(id, { currentStep: 1 });
-        // Bật Google Search để lấy dữ liệu thực từ internet cho bước phác thảo
-        const step1Text = await callVertexAI(sysPrompt, buildPrompt1(task.topic, task.contentType || '', task.audience), 0, true);
+        // Smart Search: chỉ bật cho loại bài cần dữ liệu thị trường thực tế
+        const WEB_SEARCH_TYPES = ['Bài Blog / Chia sẻ kiến thức', 'Bài Phân tích / Pháp lý, Quy hoạch'];
+        const webNeedsSearch = WEB_SEARCH_TYPES.some(t => (task.contentType || '').includes(t.split('/')[0].trim()));
+        const step1Text = await callVertexAI(sysPrompt, buildPrompt1(task.topic, task.contentType || '', task.audience), 0, webNeedsSearch);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
 
@@ -185,8 +187,10 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptFB(task.audience, task.knowledgeBase);
         
         updateTaskState(id, { currentStep: 1 });
-        // Bật Google Search để lấy dữ liệu BĐS thực từ internet
-        const step1Text = await callVertexAI(sysPrompt, buildPrompt1FB(task.topic, task.contentType || ''), 0, true);
+        // Smart Search: chỉ bật cho loại bài cần dữ liệu thực tế (phân tích, tips, sale)
+        const FB_SEARCH_TYPES = ['ANALYSIS', 'TIPS', 'SALE_PRODUCT', 'SALE_PROMO'];
+        const fbNeedsSearch = FB_SEARCH_TYPES.includes(task.contentType || '');
+        const step1Text = await callVertexAI(sysPrompt, buildPrompt1FB(task.topic, task.contentType || ''), 0, fbNeedsSearch);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
 
@@ -213,8 +217,10 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptPH(task.audience, task.knowledgeBase);
         
         updateTaskState(id, { currentStep: 1 });
-        // Bật Google Search để lấy dữ liệu BĐS thực từ internet
-        const step1Text = await callVertexAI(sysPrompt, buildPrompt1PH(task.topic, task.contentType || ''), 0, true);
+        // Smart Search: chỉ bật cho loại bài cần dữ liệu thị trường thực tế
+        const PH_SEARCH_TYPES = ['ANALYSIS', 'TIPS', 'DEAL_CALL', 'SERVICE_PITCH'];
+        const phNeedsSearch = PH_SEARCH_TYPES.includes(task.contentType || '');
+        const step1Text = await callVertexAI(sysPrompt, buildPrompt1PH(task.topic, task.contentType || ''), 0, phNeedsSearch);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
 
