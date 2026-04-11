@@ -264,9 +264,9 @@ ${step3}
 """
 
 YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
-[CẢNH BÁO QUAN TRỌNG NHẤT]: BẠN PHẢI GIỮ NGUYÊN GIỌNG ĐIỆU, NGÔN TỪ, VÀ CẢM XÚC CỦA BÀI VIẾT BƯỚC 3. TUYỆT ĐỐI KHÔNG REWRITE (viết lại) bài viết thành giọng văn máy móc, trang trọng hay mang hơi hướm AI. Nhiệm vụ của bạn chỉ là ngắt đoạn, thêm CTA, và định dạng.
+[CẢNH BÁO QUAN TRỌNG NHẤT]: BẠN PHẢI GIỮ NGUYÊN BRAND VOICE CỦA TỔ CHỨC (chuyên nghiệp, thân thiện, giải pháp của Xây Nhà Tốc Độ) ĐÃ ĐƯỢC XÂY DỰNG TỪ BƯỚC 3. TUYỆT ĐỐI KHÔNG REWRITE (viết lại) bài viết thành giọng văn máy móc hay mang hơi hướm AI. Nhiệm vụ của bạn chỉ là ngắt đoạn, thêm CTA, và định dạng. Tôn trọng cách viết mộc mạc của bước trước.
 
-1. KỶ LUẬT ĐỘ DÀI: Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập cắt tỉa lại cho gọn nhưng GIỮ NGUYÊN VĂN PHONG. Nếu quá ngắn, hãy làm rõ ý hơn.
+1. KỶ LUẬT ĐỘ DÀI: Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập cắt tỉa lại cho gọn nhưng GIỮ NGUYÊN BRAND VOICE. Nếu quá ngắn, hãy làm rõ ý hơn.
 2. ÉP BỐ CỤC MOBILE VÀ ĐỊNH DẠNG:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn).
