@@ -122,6 +122,10 @@ export function getSystemPromptFB(audience: string, knowledgeBase?: string) {
 - Tỷ lệ: 20% VẤN ĐỀ (chỉ 1 câu) → 80% GIẢI PHÁP + KẾT QUẢ + CƠ HỘI đầu tư rõ ràng.
 - TRÁNH: liệt kê dài rủi ro, câu chữ đe dọa hay bi quan. Chuyển ngay sang hướng tích cực sau khi nêu vấn đề.
 
+[GIỚI HẠN NỘI DUNG – BẮT BUỘC]
+- TUYỆT ĐỐI KHÔNG viết theo hướng công kích, chỉ trích cá nhân hoặc nhóm đối tượng cụ thể (nhà thầu khác, thợ, môi giới...). Nếu đề cập rủi ro: nói về TÌNH HUỐNG, QUY TRÌNH hoặc HỆ THỐNG, không phải về Con Người.
+- Mở rộng nguồn rủi ro: ngoài yếu tố con người, hãy đề cập cả rủi ro từ pháp lý (giấy phép, PCCC), tài chính (trượt giá vật tư, dòng tiền), kỹ thuật (kết cấu, vật liệu).
+
 [CHỐNG ĐẠO VĂN & CHỐNG RƯỜM RÀ]
 - KHI DÙNG DỮ LIỆU TỪ INTERNET: Chỉ sử dụng để lấy con số/thông tin thực tế, sau đó viết lại hoàn toàn theo Brand Voice. TUYỆT ĐỐI KHÔNG copy nguyên cụm từ hay câu từ nguồn gốc.
 - KHÔNG dùng mẫu dẫn như "Theo", "Còn theo nhiều nguồn". Viết như người trong ngành tự đúc kết.
@@ -149,8 +153,15 @@ ${getFrameworkFB(contentTypeCode)}
 
 YÊU CẦU BỔ SUNG:
 - Nội dung bám sát KẾT QUẢ TÍCH CỰC: lợi ích cụ thể, cơ hội, kết quả đo được.
+- Nếu đề cập rủi ro: gắn với quy trình, pháp lý, hoặc hệ thống — không công kích cá nhân/nhóm đối tượng nào.
 - Chèn từ khóa ngành (CHDV, phòng trọ, PCCC, giấy phép, vật tư) tự nhiên.
 - Kiểm tra 4C: Clear (dễ hiểu) | Concise (ngắn gọn) | Compelling (hấp dẫn) | Credible (số liệu cụ thể).
+
+GÓC NHÌN GỢI Ý (chọn 1 góc nhìn phù hợp nhất với chủ đề):
+- GÓC NHÌN CHUYÊN GIA THI CÔNG: Tiêu chuẩn kỹ thuật, vật liệu, quy trình nghiệm thu.
+- GÓC NHÌN QUẢN LÝ DỰ ÁN: Tiến độ, quản lý chi phí, điều phối nhân lực.
+- GÓC NHÌN CỦA CHỦ ĐẦU TƯ: Bài toán dòng tiền, an toàn pháp lý PCCC, tỷ suất lợi nhuận.
+- GÓC NHÌN TỪ CÔNG TRƯỜNG: Xử lý tình huống phát sinh, câu chuyện thực tế chuẩn bị vật tư.
 
 Chỉ trả về văn bản phác thảo, chia đoạn rõ ràng. KHÔNG sinh hình ảnh.`.trim();
 }
@@ -167,10 +178,12 @@ ${step1}
 
 YÊU CẦU:
 1. Viết lại bản nháp trên, đắp thêm "thịt" cho các ý. Độ dài theo chuẩn: ${CAPTION_GUIDE[spec.caption]}
-2. 3 DÒNG ĐẦU TIÊN (HOOK) phải thu hút ngay. Gợi ý:
-   - Nêu một LỢI ÍCH BẤT NGỜ hoặc CƠ HỘI mà nhiều Anh chị đang bỏ lỡ.
-   - Đặt 1 câu hỏi khơi gợi sự tò mò hoặc đồng cảm (KHÔNG phải câu hỏi chỉ lỗi hay đe dọa).
-   - Hoặc dùng kết quả thực tế trước: "Anh chị X đã ...", sau đó mới hỏi "Anh chị muốn làm được như vậy không?".
+2. 3 DÒNG ĐẦU TIÊN (HOOK) phải thu hút ngay. Chọn 1 trong các kiểu hook sau:
+   a) Kết quả đầu ra: "Biến mảnh đất [X] thành tòa CHDV mang về [Y triệu/tháng]..."
+   b) Câu hỏi khơi gợi: "Anh chị đã tính toán kỹ bài toán chống trượt giá vật tư khi xây CHDV chưa?"
+   c) Sự thật ngược chiều (bất ngờ tích cực): "Nhiều người nghĩ xin phép PCCC rất phức tạp — nhưng thực ra chỉ cần đi đúng quy trình tiêu chuẩn."
+   d) Câu chuyện ngắn: "Hôm qua tư vấn cho anh khách ở Gò Vấp, anh hỏi Xây Nhà Tốc Độ 1 câu..."
+   KHÔNG dùng hook đe dọa nỗi sợ hay công kích cá nhân/nhóm nghề.
 3. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng giá trị!
 4. KIỂM TRA XƯNG NGÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) bằng "Anh chị" (không gạch chéo).
 

@@ -42,6 +42,10 @@ ${getBrandVoiceBlock()}
 - Tập trung vào: Hình ảnh thành công → Cơ hội → Cam kết → CTA rõ ràng.
 - TRÁNH: Lặp lại nhiều rủi ro, liệt kê dài nhiều vấn đề, câu chữ mang tính đe dọa hay bi quan.
 
+[GIỚI HẠN NỘI DUNG – BẮT BUỘC]
+- TUYỆT ĐỐI KHÔNG viết theo hướng công kích, chỉ trích cá nhân hoặc nhóm đối tượng cụ thể (nhà thầu khác, thợ, môi giới...). Nếu đề cập rủi ro: nói về TÌNH HUỐNG, QUY TRÌNH hoặc HỆ THỐNG, không phải về Con Người.
+- Mở rộng nguồn rủi ro: ngoài yếu tố con người, hãy đề cập cả rủi ro từ pháp lý (giấy phép, PCCC), tài chính (trượt giá vật tư, dòng tiền), kỹ thuật (kết cấu, vật liệu).
+
 ${getAntiPlagiarismBlock()}
 
 CHỈ TRẢ VỀ NỘI DUNG ĐƯỢC YÊU CẦU. KHÔNG DẠ THƯA, KHÔNG GIẢI THÍCH.`.trim();
@@ -86,6 +90,12 @@ QUY TẮC YOAST BẮT BUỘC TRONG DÀN Ý:
 - Độ dài câu: ≤ 20 từ cho ≥ 75% số câu.
 - Từ nối chuyển tiếp (transition words) có mặt trong ≥ 30% câu/đoạn.
 - Không dùng giọng thụ động (passive voice) quá 10% số câu.
+
+━━━ GÓC NHÌN GỢI Ý (CHỌN 1 GÓC NHÌN XUYÊN SUỐT) ━━━
+- GÓC NHÌN CHUYÊN GIA THI CÔNG: Tiêu chuẩn kỹ thuật, vật liệu, quy trình nghiệm thu.
+- GÓC NHÌN QUẢN LÝ DỰ ÁN: Tiến độ, quản lý chi phí, điều phối nhân công.
+- GÓC NHÌN CỦA CHỦ ĐẦU TƯ: Bài toán dòng tiền, an toàn pháp lý PCCC, tỷ suất lợi nhuận.
+- GÓC NHÌN THỊ TRƯỜNG: Đánh giá xu hướng khu vực, xu hướng thiết kế nội thất tối ưu cho thuê.
 
 TRẢ VỀ:
 [PHÂN TÍCH TỪ KHÓA]
