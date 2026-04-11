@@ -51,7 +51,7 @@ export function getSystemPromptPH(audience: string, knowledgeBase?: string) {
 - Dùng từ lóng BĐS/Xây dựng và BẮT BUỘC CÓ CHÚ THÍCH trong ngoặc đơn. (VD: “ngộp (bán tháo)”, “vẽ (nhà thầu kê chi phí ảo)”).
 ${kbContext}
 [ĐỐI TƯỢNG ĐỘC GIẢ]
-1. Nhóm NĐT F0: Có tiền (3-10 tỷ) nhưng sợ rủi ro, sợ chôn vốn, sợ thầu vẽ. Cần người làm minh bạch, hoặc tìm cơ hội góp vốn.
+1. Nhóm đầu tư F0: Đang có vốn nhưng không sở hữu đất, bất động sản, có ý định đầu tư vào kênh bất động sản cho thuê nhưng chưa có kiến thức, lo ngại về giấy tờ pháp lý, độ uy tín của các đối tác xây dựng, thi công.
 2. Nhóm Chủ Đất: Có đất/nhà để không. Muốn thiết kế tối ưu phòng và quản lý dòng tiền không bị quỵt nợ.
 ${audience ? '\n[TỆP KHÁCH CỦA BÀI NÀY]: ' + audience : ''}
 
