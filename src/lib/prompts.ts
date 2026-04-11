@@ -253,22 +253,40 @@ YÊU CẦU ĐÓNG GÓI:
    - <ul><li> cho danh sách
    - <strong> cho từ/cụm từ cần nhấn mạnh
    - <!-- VỊ TRÍ ẢNH {STT} --> đặt ngay dưới H2/H3 tương ứng (4–6 vị trí)
+   - <!-- VỊ TRÍ ẢNH {STT} --> đặt ngay dưới H2/H3 tương ứng (4–6 vị trí)
 
-2. CHÈN VỊ TRÍ ẢNH CHUẨN SEO: Tại mỗi <!-- VỊ TRÍ ẢNH --> ghi thêm:
-   - Tên file ảnh: (ký-tự-thường-gạch-ngang-chua-tu-khoa.jpg)
-   - Alt text: (Chứa keyphrase, mô tả đúng nội dung ảnh, ≤ 125 ký tự)
-   - Caption: (1 câu súc tích chứa keyphrase hoặc từ khóa phụ)
+2. CHÈN VỊ TRÍ ẢNH CHUẨN HTML: Tại mỗi đoạn cần chèn ảnh (4-6 vị trí xen kẽ), BẮT BUỘC nhúng đoạn mã HTML sau để không bị mất thông tin:
+   <div style="background:#fff3cd; padding:10px; border-left:4px solid #ffbb00; margin: 15px 0;">
+     <strong>[VỊ TRÍ ẢNH SỐ X]</strong><br/>
+     - Tên file: (ký-tự-thường-gạch-ngang-chua-tu-khoa.jpg)<br/>
+     - Alt text: (Chứa keyphrase, mô tả đúng nội dung, ≤ 125 ký tự)<br/>
+     - Caption: (1 câu súc tích chứa keyphrase hoặc từ khóa phụ)
+   </div>
 
-3. BỘ META YOAST: Cung cấp đầy đủ để điền vào Yoast SEO Plugin:
+3. TẠO BẢNG CHỈ MỤC (TOC - TABLE OF CONTENTS):
+   Ngay dưới phần Mở bài (dưới thẻ <h1> và các đoạn văn mở bài), BẮT BUỘC chèn đoạn HTML sau:
+   <div style="background-color: #f4f4f4; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
+     <strong>Nội dung bài viết:</strong>
+     <ul>
+       <li><a href="#muc-1">1. [Tiêu đề H2 số 1]</a></li>
+       <li><a href="#muc-2">2. [Tiêu đề H2 số 2]</a></li>
+     </ul>
+   </div>
+   LƯU Ý BẮT BUỘC: Phải thêm id nhảy link (ví dụ: <h2 id="muc-1">...</h2>) cho TẤT CẢ các thẻ <h2> trong HTML bài viết.
+
+4. BỘ META YOAST: Cung cấp đầy đủ để điền vào Yoast SEO Plugin:
    - SEO Title: ≤ 60 ký tự | Bắt đầu bằng keyphrase | Kết thúc bằng "– Xây Nhà Tốc Độ"
    - Meta Description: 120–156 ký tự | Chứa keyphrase | Có con số cụ thể | CTA click
    - Focus Keyphrase: (Chính xác từ khóa đã dùng xuyên suốt)
    - URL Slug: (tu-khoa-chinh-ngan-gon, không có stop words)
    - Cornerstone Content: Có / Không (Đề xuất)
 
-4. BỘ LINK SEO:
-   - 2–3 Internal Links: Anchor text + gợi ý URL nội bộ (/dich-vu/..., /du-an/..., /blog/...)
-   - 1 Outbound Link: Nguồn uy tín (gov.vn, hiệp hội xây dựng, hoặc báo lớn)
+5. XỬ LÝ NGUỒN TÁC GIẢ (OUTBOUND LINK):
+   - Thay vì liệt kê Outbound link ở Meta râu ria, hãy CHÈN TRỰC TIẾP VÀO HTML. 
+   - Trong văn bản đoạn nào nhắc đến số liệu, thêm số trích dẫn superscript, ví dụ: <sup>[1]</sup>.
+   - Ở vị trí CUỐI CÙNG của bài viết (dưới cùng), chèn mục Nguồn tham khảo:
+     <h3><strong>Nguồn tham khảo</strong></h3>
+     <p>[1] Tác giả / Nguồn: <a href="[URL OUTBOUND LINK UY TÍN]" target="_blank" rel="nofollow">Tiêu đề bài viết tham khảo</a></p>
 
 ${getBrandVoiceBlock()}
 
@@ -286,10 +304,6 @@ ${getBrandVoiceBlock()}
 [INTERNAL LINKS ĐỀ XUẤT]
 1. Anchor: "..." → URL: /...
 2. Anchor: "..." → URL: /...
-3. Anchor: "..." → URL: /...
-
-[OUTBOUND LINK ĐỀ XUẤT]
-- Anchor: "..." → URL: https://...
 
 ━━━━━━━━━━━━━━━━━━━━━━━━
 [BÀI VIẾT HTML HOÀN CHỈNH KÈM VỊ TRÍ ẢNH]
