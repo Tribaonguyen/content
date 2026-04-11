@@ -10,7 +10,7 @@ export const WEB_CONTENT_TYPES = [
 function getBrandVoiceBlock() {
   return `
 [BRAND VOICE – XÂY NHÀ TỐC ĐỘ]
-- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách → "Anh chị". TUYỆT ĐỐI không dùng "em", "mình", "bạn".
+- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách → viết "Anh chị" (KHÔNG dùng gạch chéo "Anh/Chị"). TUYỆT ĐỐI không dùng "em", "mình", "bạn".
 - Giọng điệu: Thân thiện, gần gũi, vui vẻ — như người bạn chuyên môn đang tư vấn thật lòng. Trực diện nhưng không gắt, không cảnh báo đe dọa. Nói bằng số thực tế (tiền – thời gian – lợi ích). Không hoa mỹ, không đạo lý.
 - Cam kết cốt lõi: Không phát sinh chi phí | Đúng tiến độ | Chuẩn pháp lý PCCC.`.trim();
 }
@@ -135,7 +135,7 @@ YÊU CẦU VIẾT BÀI – TỪNG TIÊU CHÍ YOAST READABILITY:
 
 ✅ 6. MỞ BÀI (Introduction):
    - Câu đầu tiên: chứa Focus Keyphrase trong 10 từ đầu.
-   - Gây tò mò bằng 1 sự thật bất ngờ hoặc 1 câu hỏi nhức nhối của khách hàng.
+   - Gây tò mò bằng 1 LỢI ÍCH BẤT NGờ hoặc 1 CƠ HỘI mà nhiều Anh chị chưa biết. KHÔNG mở bài bằng câu hỏi đe dọa hay cảnh báo.
    - Độ dài mở bài: 80–120 từ.
 
 ✅ 7. KẾT BÀI (Conclusion):
@@ -197,6 +197,8 @@ CHỈ LẤY PHẦN "[BÀI VIẾT HOÀN CHỈNH]" và tối ưu theo CHECKLIST YO
 1. Sửa trực tiếp bài viết theo tất cả checklist trên.
 2. Thêm 2 gợi ý [INTERNAL LINK] và 1 gợi ý [OUTBOUND LINK] vào đúng vị trí trong bài.
 3. Đảm bảo keyphrase xuất hiện tự nhiên đủ mật độ (không nhồi nhét).
+4. KIỂM TRA XƯNG HÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) → "Anh chị". Không đổi "chúng tôi".
+5. KIỂM TRA GIỌNG ĐIỆU: Xóa hoặc viết lại bất kỳ câu nào mang tính đe dọa, cảnh báo ép sợ hãi. Thay bằng lợi ích, cơ hội, kết quả thực tế.
 
 ${getBrandVoiceBlock()}
 
