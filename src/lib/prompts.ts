@@ -252,10 +252,8 @@ YÊU CẦU ĐÓNG GÓI:
    - <p> cho đoạn văn
    - <ul><li> cho danh sách
    - <strong> cho từ/cụm từ cần nhấn mạnh
-   - <!-- VỊ TRÍ ẢNH {STT} --> đặt ngay dưới H2/H3 tương ứng (4–6 vị trí)
-   - <!-- VỊ TRÍ ẢNH {STT} --> đặt ngay dưới H2/H3 tương ứng (4–6 vị trí)
 
-2. CHÈN VỊ TRÍ ẢNH CHUẨN HTML: Tại mỗi đoạn cần chèn ảnh (4-6 vị trí xen kẽ), BẮT BUỘC nhúng đoạn mã HTML sau để không bị mất thông tin:
+2. CHÈN VỊ TRÍ ẢNH CHUẨN HTML: KHÔNG dùng thẻ comment <!-- -->. Tại mỗi đoạn cần chèn ảnh (4-6 vị trí xen kẽ), BẮT BUỘC nhúng khối <div> sau vào trong HTML:
    <div style="background:#fff3cd; padding:10px; border-left:4px solid #ffbb00; margin: 15px 0;">
      <strong>[VỊ TRÍ ẢNH SỐ X]</strong><br/>
      - Tên file: (ký-tự-thường-gạch-ngang-chua-tu-khoa.jpg)<br/>
@@ -264,7 +262,7 @@ YÊU CẦU ĐÓNG GÓI:
    </div>
 
 3. TẠO BẢNG CHỈ MỤC (TOC - TABLE OF CONTENTS):
-   Ngay dưới phần Mở bài (dưới thẻ <h1> và các đoạn văn mở bài), BẮT BUỘC chèn đoạn HTML sau:
+   Ngay dưới thẻ <h1> và 1-2 đoạn văn mở bài, TUYỆT ĐỐI KHÔNG ĐƯỢC QUÊN chèn đoạn mã HTML tạo Mục lục này:
    <div style="background-color: #f4f4f4; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
      <strong>Nội dung bài viết:</strong>
      <ul>
@@ -272,7 +270,7 @@ YÊU CẦU ĐÓNG GÓI:
        <li><a href="#muc-2">2. [Tiêu đề H2 số 2]</a></li>
      </ul>
    </div>
-   LƯU Ý BẮT BUỘC: Phải thêm id nhảy link (ví dụ: <h2 id="muc-1">...</h2>) cho TẤT CẢ các thẻ <h2> trong HTML bài viết.
+   Và BẮT BUỘC thêm id nhảy link (ví dụ: <h2 id="muc-1">...</h2>) cho toàn bộ các thẻ <h2> phía dưới để Mục lục hoạt động.
 
 4. BỘ META YOAST: Cung cấp đầy đủ để điền vào Yoast SEO Plugin:
    - SEO Title: ≤ 60 ký tự | Bắt đầu bằng keyphrase | Kết thúc bằng "– Xây Nhà Tốc Độ"
@@ -308,7 +306,7 @@ ${getBrandVoiceBlock()}
 ━━━━━━━━━━━━━━━━━━━━━━━━
 [BÀI VIẾT HTML HOÀN CHỈNH KÈM VỊ TRÍ ẢNH]
 ━━━━━━━━━━━━━━━━━━━━━━━━
-(Dán toàn bộ HTML bài viết vào đây)
+(Dán toàn bộ mã HTML bài viết vào đây. CHÚ Ý: BẮT BUỘC PHẢI CHỨA BẢNG MỤC LỤC (TOC) VÀ CÁC THẺ <DIV> CHỨA ẢNH MÀU VÀNG Ở TRONG ĐÓ)
 `.trim();
 };
 
