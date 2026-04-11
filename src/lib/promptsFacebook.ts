@@ -218,11 +218,13 @@ ${step2}
 """
 
 YÊU CẦU ÉP KHUÔN ĐỂ VƯỢT QUA AI DETECTOR (CHỐNG MÁY MÓC):
-1. GIỌNG VĂN THỰC TẾ: Đóng vai một kỹ sư trưởng đang ngồi tư vấn thân thiện với chủ đầu tư. Không dùng từ bác học hay văn phong hành chính trịnh trọng. Viết đúng kiểu người thật đang chia sẻ kinh nghiệm.
-2. BẺ GÃY NHỊP ĐIỆU (BURSTINESS): Bắt buộc xen kẽ các câu cực ngắn (4-8 chữ) ngay sau các câu dài. Ví dụ: "Đất hẻm nhỏ xây rất cực. Nhưng bù lại bài toán dòng tiền lại cực kỳ an toàn." KHÔNG viết tất cả các câu dài đều đều nhau.
-3. CẤM LIÊN TỪ AI (PERPLEXITY): Tuyệt đối KHÔNG dùng các từ nối đầu câu sáo rỗng của AI như: "Đầu tiên,", "Hơn nữa,", "Mặt khác,", "Ngoài ra,", "Thêm vào đó,", "Do đó,". Thay bằng cách vào thẳng vấn đề hoặc dùng các cụm giao tiếp mộc mạc: "Thực tế là", "Anh chị để ý sẽ thấy", "Bài toán ở đây là".
-4. TÍNH THỰC CHIẾN: Bổ sung 1 ví dụ thực tế hoặc 1 con số cụ thể làm minh chứng (nếu chủ đề cho phép). Tuyệt đối không nói sáo rỗng.
-5. KIỂM TRA XƯNG HÔ VÀ TỪ CẤM: Đảm bảo gọi khách hàng là "Anh chị". Giữ nguyên "chúng tôi". TUYỆT ĐỐI CẤM ký tự gạch chéo (Anh/Chị). Xóa các từ: Hành trình, khám phá, tuyệt vời, nâng tầm... Thay bằng từ ngữ dễ hiểu.
+Để đảm bảo bài viết tự nhiên và không bị đánh giá là AI:
+✅ Viết lại câu theo cách diễn đạt linh hoạt hơn: Tránh viết quá rập khuôn hoặc theo kiểu AI. Hãy sử dụng cách diễn đạt sáng tạo, đa dạng. Tuyệt đối KHÔNG dùng các từ nối đầu câu sáo rỗng của AI như: "Đầu tiên,", "Hơn nữa,", "Mặt khác,", "Ngoài ra,", "Thêm vào đó,", "Do đó,".
+✅ Thêm yếu tố con người vào nội dung: Đóng vai kỹ sư trưởng, bổ sung câu chuyện thực tế, ví dụ từ khách hàng, cảm xúc cá nhân, lời khuyên hữu ích.
+✅ Dùng câu hỏi để tăng tương tác với người đọc.
+✅ Viết câu ngắn gọn, tự nhiên: Bẻ gãy nhịp điệu (Burstiness), xen kẽ câu cực ngắn và dài. Hạn chế viết toàn câu quá dài, tránh cách viết máy móc.
+✅ Kiểm tra lại và thay đổi bố cục bài viết: Nếu bài viết có phần nào quá rập khuôn, hãy thử sắp xếp lại nội dung theo một cách sáng tạo hơn.
+✅ KIỂM TRA XƯNG HÔ VÀ TỪ CẤM: Đảm bảo gọi khách hàng là "Anh chị". Giữ nguyên "chúng tôi". TUYỆT ĐỐI CẤM ký tự gạch chéo (Anh/Chị). Xóa các từ: Hành trình, khám phá, tuyệt vời, nâng tầm... Thay bằng từ ngữ dễ hiểu.
 
 KIỂM TRA GIỌNG ĐIỆU VÀ ĐỊNH DẠNG HÌNH ẢNH:
 🚫 Xóa hoặc làm nhẹ bất kỳ câu nào mang tính đe dọa, cảnh báo ép sợ hãi ("có đang bị...", "coi chừng...", "nguy hiểm...").
