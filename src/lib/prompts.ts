@@ -35,6 +35,13 @@ export function getSystemPromptWeb(knowledgeBase?: string) {
 
 ${getBrandVoiceBlock()}
 
+[GIỌNG ĐIỆU TÍCH CỰC & CÂN BẰNG – BẮT BUỘC]
+- Tỷ lệ nội dung: 20% VẤN ĐỀ (nỗi đau/thách thức) → 80% GIẢI PHÁP + LỢI ÍCH + KẾT QUẢ CỤ THỂ.
+- Nếu đề cập vấn đề: chỉ 1 câu duy nhất, sau đó ngay lập tức chuyển sang giải pháp và kết quả.
+- Giọng văn: Tin tưởng, lạc quan, truyền cảm hứng. Như một đội ngũ đã giúp trăm khách thành công – không phải giọng cảnh báo hay đe dọa.
+- Tập trung vào: Hình ảnh thành công → Cơ hội → Cam kết → CTA rõ ràng.
+- TRÁNH: Lặp lại nhiều rủi ro, liệt kê dài nhiều vấn đề, câu chữ mang tính đe dọa hay bi quan.
+
 ${getAntiPlagiarismBlock()}
 
 CHỈ TRẢ VỀ NỘI DUNG ĐƯỢC YÊU CẦU. KHÔNG DẠ THƯA, KHÔNG GIẢI THÍCH.`.trim();
@@ -64,10 +71,13 @@ Xây dựng cấu trúc bài viết (1.000–1.500 từ) đạt GREEN LIGHT Yoas
 
 1. [H1] – Chứa CHÍNH XÁC từ khóa chính. Dưới 60 ký tự.
 2. [ĐOẠN MỞ BÀI – 100 từ] – Câu đầu tiên chứa từ khóa chính trong 10 từ đầu.
+   → Mở bằng một KẾT QUẢ CỤ THỂ hoặc LỢI ÍCH rõ ràng để kéo người đọc vào.
+   → Nếu đề cập vấn đề khách hàng: chỉ 1 câu, rồi chuyển ngay sang giải pháp.
 3. [H2 #1] – Chứa từ khóa chính hoặc biến thể gần nhất.
-   - [H3] các luận điểm con
+   - [H3] các luận điểm con → Tập trung vào LỢI ÍCH & GIẢI PHÁP (không liệt kê vấn đề).
 4. [H2 #2] đến [H2 #4–5] – Dùng từ khóa phụ/LSI. Mỗi phần H2 tối đa 300 từ.
-5. [H2 – KẾT LUẬN] – Tóm tắt + CTA mạnh.
+   → Cấu trúc mỗi H2: Kết quả/lợi ích → Cách thực hiện → Cam kết của Xây Nhà Tốc Độ.
+5. [H2 – KẾT LUẬN] – Hình ảnh thành công + tóm tắt lợi ích + CTA mạnh.
    CTA: "Liên hệ Xây Nhà Tốc Độ – Hotline/Zalo: 0866.186.189"
 
 QUY TẮC YOAST BẮT BUỘC TRONG DÀN Ý:

@@ -59,8 +59,11 @@ export function buildPrompt1FB(topic: string, contentTypeCode: string) {
 - Độ dài dự kiến: ${CAPTION_GUIDE[spec.caption]}
 
 YÊU CẦU:
-1. Xây dựng dàn ý theo công thức PAS (Problem - Agitate - Solution): Nêu thẳng vấn đề/nỗi đau -> Khoét sâu hậu quả nếu làm sai -> Đưa giải pháp của Xây Nhà Tốc Độ.
-2. Các luận điểm phải gắn liền với "Tiền" (chi phí, lợi nhuận) hoặc "Thời gian" (tiến độ) của khách hàng.
+1. Xây dựng dàn ý theo công thức PAS→BAB CÂN BẰNG:
+   - Problem (1 câu): Nêu thẳng vấn đề/nỗi đau của chủ đầu tư.
+   - Agitate (1 câu): Nhắc nhẹ hậu quả nếu không giải quyết đúng.
+   - Solution + After + Bridge (phần còn lại): Xây Nhà Tốc Độ giải quyết RA SAO → Kết quả đạt được là GÌ → Khách hàng cụ thể đã thành công NHƯ THẾ NÀO.
+2. Các luận điểm phải gắn liền với KẾT QUẢ TÍCH CỰC: lợi nhuận đạt được, tiến độ hoàn thành đúng hạn, an tâm pháp lý. Không chỉ liệt kê rủi ro.
 3. Chèn từ khóa ngành (CHDV, phòng trọ, PCCC, giấy phép, vật tư) tự nhiên.
 
 Chỉ trả về văn bản phác thảo, chia đoạn rõ ràng. KHÔNG sinh hình ảnh.`.trim();
