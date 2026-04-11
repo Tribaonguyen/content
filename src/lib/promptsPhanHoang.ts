@@ -1,27 +1,27 @@
 export const CONTENT_SPECS_PH: Record<string, Record<string, string>> = {
-  MEME_TREND:    { label:"Tương tác – Chuyện nghề / Trào lưu BĐS",        img:"1",   img_size:"1200x1200", video:"optional", caption:"short",       cta:"optional" },
-  POLL:          { label:"Tương tác – Thảo luận / Hỏi ý kiến anh em",      img:"1",   img_size:"1200x1200", video:"none",     caption:"short",       cta:"soft"     },
-  TIPS:          { label:"Thực chiến – Kinh nghiệm / Bài học xương máu",   img:"1-3", img_size:"1200x1200", video:"optional", caption:"medium_long", cta:"soft"     },
-  ANALYSIS:      { label:"Thực chiến – Phân tích thị trường / Góc nhìn",   img:"1",   img_size:"1200x1200", video:"optional", caption:"long",        cta:"soft"     },
-  DEAL_CALL:     { label:"Kinh doanh – Gọi vốn / Phân tích kèo đầu tư",    img:"1-3", img_size:"1080x1350", video:"optional", caption:"medium",      cta:"required" },
-  SERVICE_PITCH: { label:"Kinh doanh – Giới thiệu giải pháp / Dịch vụ",    img:"1",   img_size:"1080x1350", video:"optional", caption:"medium",      cta:"required" },
-  TESTIMONIAL:   { label:"Uy tín – Case study / Cứu nét dự án thực tế",    img:"2-5", img_size:"1200x1200", video:"optional", caption:"long",        cta:"required" },
-  DIARY:         { label:"Đời sống – Nhật ký công trường / Hành trình",    img:"2-4", img_size:"1200x1200", video:"optional", caption:"long",        cta:"soft"     },
-  TEAM_CULTURE:  { label:"Đội ngũ – Câu chuyện thợ thầy / Anh em KS",      img:"1-3", img_size:"1200x1200", video:"optional", caption:"medium",      cta:"soft"     },
-  REDIRECT:      { label:"Điều hướng – Kéo mem Group Zalo / Website",      img:"1",   img_size:"1200x630",  video:"none",     caption:"short",       cta:"required" },
-  EVENT:         { label:"Sự kiện – Thông báo Livestream / Offline",       img:"1",   img_size:"1080x1350", video:"optional", caption:"short",       cta:"required" }
+  MEME_TREND: { label: "Tương tác – Chuyện nghề / Trào lưu BĐS", img: "1", img_size: "1200x1200", video: "optional", caption: "short", cta: "optional" },
+  POLL: { label: "Tương tác – Thảo luận / Hỏi ý kiến anh em", img: "1", img_size: "1200x1200", video: "none", caption: "short", cta: "soft" },
+  TIPS: { label: "Thực chiến – Kinh nghiệm / Bài học xương máu", img: "1-3", img_size: "1200x1200", video: "optional", caption: "medium_long", cta: "soft" },
+  ANALYSIS: { label: "Thực chiến – Phân tích thị trường / Góc nhìn", img: "1", img_size: "1200x1200", video: "optional", caption: "long", cta: "soft" },
+  DEAL_CALL: { label: "Kinh doanh – Gọi vốn / Phân tích kèo đầu tư", img: "1-3", img_size: "1080x1350", video: "optional", caption: "medium", cta: "required" },
+  SERVICE_PITCH: { label: "Kinh doanh – Giới thiệu giải pháp / Dịch vụ", img: "1", img_size: "1080x1350", video: "optional", caption: "medium", cta: "required" },
+  TESTIMONIAL: { label: "Uy tín – Case study / Cứu nét dự án thực tế", img: "2-5", img_size: "1200x1200", video: "optional", caption: "long", cta: "required" },
+  DIARY: { label: "Đời sống – Nhật ký công trường / Hành trình", img: "2-4", img_size: "1200x1200", video: "optional", caption: "long", cta: "soft" },
+  TEAM_CULTURE: { label: "Đội ngũ – Câu chuyện thợ thầy / Anh em KS", img: "1-3", img_size: "1200x1200", video: "optional", caption: "medium", cta: "soft" },
+  REDIRECT: { label: "Điều hướng – Kéo mem Group Zalo / Website", img: "1", img_size: "1200x630", video: "none", caption: "short", cta: "required" },
+  EVENT: { label: "Sự kiện – Thông báo Livestream / Offline", img: "1", img_size: "1080x1350", video: "optional", caption: "short", cta: "required" }
 };
 
 const CAPTION_GUIDE: Record<string, string> = {
-  short:       "rất ngắn: 1–3 câu, tối đa 80 ký tự",
-  medium:      "vừa: 4–8 câu, khoảng 100–250 từ, đoạn đầu < 125 ký tự",
+  short: "rất ngắn: 1–3 câu, tối đa 80 ký tự",
+  medium: "vừa: 4–8 câu, khoảng 100–250 từ, đoạn đầu < 125 ký tự",
   medium_long: "trung bình dài: 5–12 câu, 150–300 từ, chia 3–5 đoạn",
-  long:        "dài: 8–20 câu, 200–400 từ, chia đoạn 2–3 câu/đoạn"
+  long: "dài: 8–20 câu, 200–400 từ, chia đoạn 2–3 câu/đoạn"
 };
 
 const CTA_GUIDE: Record<string, string> = {
   required: "PHẢI có CTA rõ ràng, 1 hành động duy nhất (Tham gia nhóm / Inbox / Gọi).",
-  soft:     "CTA nhẹ: Khuyến khích anh em để lại bình luận, ý kiến tranh luận.",
+  soft: "CTA nhẹ: Khuyến khích anh em để lại bình luận, ý kiến tranh luận.",
   optional: "Không cần CTA cứng, nói chuyện phiếm tự nhiên."
 };
 
@@ -63,7 +63,7 @@ function getFrameworkPH(code: string): string {
   const map: Record<string, string> = {
 
     MEME_TREND:
-`CÔNG THỨC: 4U + APP (bài chuyện nghề / bắt trend BĐS)
+      `CÔNG THỨC: 4U + APP (bài chuyện nghề / bắt trend BĐS)
 - 4U cho HOOK: Câu đầu đủ Useful + Urgent + Unique + Ultra-specific (con số/tình huống cụ thể).
 - APP cho thân bài:
   + Agree: Hoàng thấu hiểu cảm giác/tình huống anh em đang gặp.
@@ -71,64 +71,64 @@ function getFrameworkPH(code: string): string {
   + Preview: Hé lộ nội dung để kéo anh em đọc tiếp.`,
 
     POLL:
-`CÔNG THỨC: APP (bài thảo luận / hỏi ý kiến)
+      `CÔNG THỨC: APP (bài thảo luận / hỏi ý kiến)
 - Agree: Mở bằng 1 tình huống THỰC TẾ anh em ĐANG GẶP — Hoàng đồng cảm ngay.
 - Promise: Cam kết chia sẻ góc nhìn hoặc đúc kết sau khi thu thập ý kiến.
 - Preview: Dẫn vào câu hỏi vote/thảo luận.`,
 
     TIPS:
-`CÔNG THỨC: FAB + 4C (bài kinh nghiệm / bài học xương máu)
+      `CÔNG THỨC: FAB + 4C (bài kinh nghiệm / bài học xương máu)
 - FAB cho từng điểm thực chiến:
   + Feature (Phương pháp/Bước) → Advantage (Tại sao hiệu quả hơn cách thường làm) → Benefit (Anh em lời bao nhiêu hoặc tránh mất bao nhiêu).
 - 4C checklist: Clear (dễ hiểu ngay) | Concise (ngắn, không dài dòng) | Compelling (có yếu tố gây sốc/bất ngờ) | Credible (số liệu chứng minh).`,
 
     ANALYSIS:
-`CÔNG THỨC: FAB + 4C (bài phân tích thị trường / góc nhìn)
+      `CÔNG THỨC: FAB + 4C (bài phân tích thị trường / góc nhìn)
 - Mở bài: Luận điểm chính — 1 câu ngắn, sắc bén, gây tranh luận nếu có thể.
 - Thân bài FAB: Mỗi lý do/dữ liệu → Ưu điểm góc nhìn đó → Lợi ích cụ thể cho anh em đầu tư.
 - Kết: Hoàng đúc kết 1 câu + mời anh em tranh luận.
 - 4C: Clear | Concise | Compelling | Credible.`,
 
     DEAL_CALL:
-`CÔNG THỨC: AIDA (bài gọi vốn / phân tích kèo đầu tư)
+      `CÔNG THỨC: AIDA (bài gọi vốn / phân tích kèo đầu tư)
 - Attention: Kèo đầu tư cụ thể hoặc con số lợi nhuận hấp dẫn ngay đầu bài.
 - Interest: Vì sao kèo này khác biệt so với thị trường — số liệu, vị trí, tiềm năng.
 - Desire: Đã có ai làm chưa, kết quả ra sao (case thực tế nếu có).
 - Action: Cách tham gia/liên hệ cụ thể — 1 hành động duy nhất.`,
 
     SERVICE_PITCH:
-`CÔNG THỨC: AIDA + FAB (bài giới thiệu giải pháp / dịch vụ)
+      `CÔNG THỨC: AIDA + FAB (bài giới thiệu giải pháp / dịch vụ)
 - Attention: Hook bằng kết quả đầu ra hoặc vấn đề nóng anh em đang gặp.
 - Interest + FAB: Giới thiệu giải pháp theo Feature → Advantage → Benefit thực tế.
 - Desire: Case hoặc số liệu chứng minh hiệu quả.
 - Action: 1 CTA rõ ràng.`,
 
     TESTIMONIAL:
-`CÔNG THỨC: SSS – Star Story Solution (case study thực tế)
+      `CÔNG THỨC: SSS – Star Story Solution (case study thực tế)
 - Star: Anh em đầu tư cụ thể (loại hình, quy mô, bối cảnh ban đầu).
 - Story: Hành trình — họ gặp vướng mắc gì, cảm xúc/quyết định như thế nào.
 - Solution: Hoàng và đội ngũ giải quyết ra sao + kết quả đo được bằng số cụ thể.`,
 
     DIARY:
-`CÔNG THỨC: SSS + APP (nhật ký công trường / hành trình)
+      `CÔNG THỨC: SSS + APP (nhật ký công trường / hành trình)
 - Agree: Mở bằng khoảnh khắc/cảm xúc thực tế Hoàng đang trải qua.
 - Star → Story → Solution: Kể thật, có điểm khó khăn và điểm đúc kết.
 - Preview/Kết: Gợi mở bài học hoặc điều tiếp theo.`,
 
     TEAM_CULTURE:
-`CÔNG THỨC: SSS + APP (câu chuyện đội ngũ / anh em kỹ sư)
+      `CÔNG THỨC: SSS + APP (câu chuyện đội ngũ / anh em kỹ sư)
 - Agree: Thấu hiểu nỗi trăn trở của người thợ hoặc kỹ sư trẻ.
 - Star (nhân vật) → Story (hành trình thực tế) → Solution (bài học + kết quả).
 - Preview: Hé lộ văn hóa đội nhóm qua góc nhìn này.`,
 
     REDIRECT:
-`CÔNG THỨC: 4U + AIDA rút gọn (bài kéo mem nhóm / dẫn link)
+      `CÔNG THỨC: 4U + AIDA rút gọn (bài kéo mem nhóm / dẫn link)
 - Hook 4U: Câu đầu đủ Useful + Urgent + Unique + Ultra-specific.
 - Body: 1–2 câu lý do anh em phải vào nhóm/click link ngay.
 - CTA: 1 câu duy nhất, link/chỉ dẫn rõ ràng.`,
 
     EVENT:
-`CÔNG THỨC: 4U + AIDA (thông báo Livestream / Offline)
+      `CÔNG THỨC: 4U + AIDA (thông báo Livestream / Offline)
 - 4U cho tiêu đề: Cụ thể ngày giờ + ai nên tham gia + anh em sẽ NHẬN ĐƯỢC gì.
 - AIDA rút gọn: Lý do tham gia → Lợi ích thực tế → Đăng ký/Thả tim ngay.`
   };
@@ -178,9 +178,9 @@ YÊU CẦU:
    a) Kết quả đầu ra: "Anh em này chuyển [X tỷ] sang CHDV — thu hồi xong trong [Y tháng]."
    b) Câu hỏi khơi gợi: "Anh em đã bao giờ tính toán mình đang bỏ lỡ bao nhiêu mỗi tháng chưa?"
    c) Sự thật ngược chiều (bất ngờ tích cực): "Đa số người sợ đầu tư CHDV vì nghĩ phức tạp — nhưng thực ra đây là mô hình đơn giản nhất mình đã làm."
-   d) Câu chuyện ngắn: "Hôm qua anh em khách đến hỏi mình về [chủ đề]. Mình có 1 câu trả lời như này..."
+   d) Câu chuyện ngắn: "Một số ae nhắn hỏi mình về [chủ đề]. Mình chia sẻ như này..."
    KHÔNG dùng hook đe dọa nỗi sợ hay công kích cá nhân/nhóm nghề.
-3. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng giá trị!
+3. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng vấn đề!
 4. KIỂM TRA XƯNG NGÔ: Thay toàn bộ "Tôi" / "tôi" bằng "mình" hoặc "Hoàng".
 
 Chỉ trả về văn bản nội dung.`.trim();
@@ -229,10 +229,10 @@ YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn). 
    - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt, dễ quét bằng mắt (scan) trên màn hình điện thoại.
-3. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): CHỈ chèn câu điều hướng xem hình ảnh/video khi thực sự cần thiết (ví dụ: bài có hình ảnh thực tế công trình, ảnh feedback, bản vẽ). Các bài chia sẻ quan điểm, chuyên môn/lý thuyết thông thường KHÔNG CẦN câu điều hướng ảnh để tránh gượng ép. Nếu cần thiết thì:
-   - Nếu định mức là nhiều ảnh (ví dụ 1-3, 2-5...): Viết câu kích thích người đọc lướt xem album. (VD: "👉 Anh em lướt xem chi tiết bên dưới...").
-   - Nếu định mức là 1 ảnh/video: "👉 Xem ngay hình ảnh/video thực tế bên dưới...".
-   - Nếu là bài Điều hướng: "👉 Anh em click ngay vào link/hình bên dưới để xem chi tiết...".
+3. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
+   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Xóa sạch mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền ngu, bạc tóc, lừa đảo).
+   - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
+4. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): MẶC ĐỊNH KHÔNG ĐƯỢC chèn bất kỳ câu điều hướng nào (VD: 👉 Lướt xem hình bên dưới) để tránh gượng ép. CHỈ được phép chèn nếu người dùng chủ động yêu cầu trong bài hoặc nếu thuộc loại bài TESTIMONIAL/EVENT.
    - Những phần cần nhấn mạnh, thay vị dùng Markdown thì thay bằng CHỮ IN HOA
 4. KỶ LUẬT KẾT LUẬN: ĐOẠN CUỐI CÙNG (trước phần chữ ký) BẮT BUỘC phải bắt đầu bằng một trong ba cụm từ: "Tóm lại,", "Nhìn chung,", hoặc "Vậy nên," để đúc kết lại vấn đề cốt lõi nhất của bài.
 5. KỶ LUẬT CTA & CHỮ KÝ: Lồng ghép [Mức độ CTA] tự nhiên. LUÔN CHÈN chính xác khối thông tin sau ở cuối cùng (không sửa chữ nào):
@@ -246,7 +246,7 @@ TRẢ VỀ DUY NHẤT BÀI VIẾT FACEBOOK HOÀN CHỈNH, SẴN SÀNG COPY/PASTE
 
 export function buildPrompt5PH(topic: string, step4: string, contentTypeCode: string) {
   const spec = CONTENT_SPECS_PH[contentTypeCode];
-  
+
   const FB_IMAGE_RULES = `
 [QUY TẮC HIỂN THỊ FACEBOOK - TRÁNH BỊ CẮT XÉN]
 Dựa vào số lượng ảnh bạn quyết định sử dụng, BẮT BUỘC áp dụng kích thước sau cho Designer:

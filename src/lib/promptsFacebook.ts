@@ -243,10 +243,10 @@ YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn).
    - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt, dễ quét bằng mắt (scan) trên màn hình điện thoại.
-3. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): CHỈ chèn câu điều hướng xem hình ảnh/video khi thực sự cần thiết (ví dụ: bài có hình ảnh thực tế công trình, ảnh feedback, bảng giá, bản vẽ). Các bài chia sẻ quan điểm, lý thuyết thông thường KHÔNG CẦN câu điều hướng ảnh để tránh gượng ép. Nếu cần thiết thì:
-   - Nếu định mức là nhiều ảnh (ví dụ 1-3, 2-5...): Viết câu kích thích người đọc lướt xem album.
-   - Nếu định mức là 1 ảnh/video: "👉 Xem ngay hình ảnh/video thực tế bên dưới...".
-   - Nếu là loại bài Điều hướng (Redirect): "👉 Click ngay vào hình ảnh/link bên dưới để đọc bài viết chi tiết...".
+3. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
+   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Xóa sạch mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền ngu, bạc tóc, lừa đảo).
+   - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
+4. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): MẶC ĐỊNH KHÔNG ĐƯỢC chèn bất kỳ câu điều hướng nào (VD: 👉 Lướt xem hình bên dưới) để tránh gượng ép. CHỈ được phép chèn nếu người dùng chủ động yêu cầu trong bài hoặc nếu thuộc loại bài TESTIMONIAL/EVENT.
 4. KỶ LUẬT CTA: Lồng ghép [Mức độ CTA] một cách tự nhiên vào phần kết bài, đúng với tinh thần của loại bài này.
 5. THÔNG TIN LIÊN HỆ: LUÔN CHÈN chính xác khối thông tin sau ở cuối cùng (không sửa chữ nào):
 ---
