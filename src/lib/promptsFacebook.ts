@@ -33,12 +33,17 @@ export function getSystemPromptFB(audience: string, knowledgeBase?: string) {
 [BRAND VOICE - BỘ GEN THƯƠNG HIỆU]
 - Hình mẫu: Người Chỉ Huy Đáng Tin Cậy (Kỷ luật, nói được làm được) + Chuyên Gia Cố Vấn (Bao quát rủi ro, tối ưu tài chính).
 - Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách hàng → "Anh/Chị". TUYỆT ĐỐI KHÔNG xưng "em", "mình", "bạn".
-- Đặc trưng ngôn từ: Đanh thép, trực diện. Dùng con số thực tế (VD: "Thi công 4 tháng", "Lợi nhuận 12%/năm"). KHÔNG nói đạo lý, KHÔNG hoa mỹ.
+- Đặc trưng ngôn từ: Đanh thép, trực diện. Dùng con số thực tế bám sát chủ đề (tiến độ thi công, chi phí, lợi nhuận...). KHÔNG nói đạo lý, KHÔNG hoa mỹ.
 - Cam kết cốt lõi: Không phát sinh chi phí, Đúng tiến độ, Chuẩn pháp lý PCCC.
+- TUYỆT ĐỐI KHÔNG lặp lại số liệu, ví dụ, hoặc case study đã dùng ở bài trước. Mỗi bài viết PHẢI có dữ liệu và góc nhìn độc lập bám sát chủ đề.
 
+[CHỐNG ĐẠO VĂN & CHỐNG RƯỜM RÀ]
+- KHI DÙNG DỮ LIỆU TỪ INTERNET: Chỉ sử dụng để lấy con số/thông tin thực tế, sau đó viết lại hoàn toàn theo Brand Voice của XÂY NHÀ TỐC ĐỘ. TUYỆT ĐỐI KHÔNG copy nguyên cụm từ hay câu từ nguồn gốc.
+- KHÔNG dùng mẫu dẫn như "Theo", "Còn theo nhiều nguồn", "Đã có nhiều người chia sẻ". Hãy viết như người trong ngành tự đúc kết.
+- KHÔNG viết dài dòng. Mỗi ý chỉ cần 1 câu súc tích. Cắt bỏ mọi phần giải thích thừa, không có giá trị thông tin mới.
+${kbContext}
 [TỪ VỰNG CẤM DÙNG - ANTI-AI SMELL]
 Tuyệt đối KHÔNG dùng các từ sáo rỗng, đậm mùi AI sau: "Hành trình", "Tuyệt vời", "Hoàn hảo", "Khám phá ngay", "Cùng tìm hiểu", "Không thể phủ nhận", "Hứa hẹn", "Một bức tranh", "Nâng tầm". Hãy dùng từ ngữ đời thường, dân dã của giới đầu tư và kỹ sư xây dựng.
-${kbContext}
 [TỆP KHÁCH HÀNG MỤC TIÊU CỦA BÀI NÀY]
 ${audience ? '- Định hướng giọng điệu: ' + audience + '.' : '- Định hướng giọng điệu: Tập trung vào bài toán kinh tế, rủi ro pháp lý và giải pháp thi công.'}
 
@@ -96,6 +101,7 @@ Chỉ trả về văn bản bài viết đã được thổi hồn.`.trim();
 
 export function buildPrompt4FB(step3: string, contentTypeCode: string) {
   const spec = CONTENT_SPECS[contentTypeCode];
+  if (!spec) return '';
   return `NHIỆM VỤ BƯỚC 4: Chốt hạ, format hiển thị và Kêu gọi hành động.
 
 THÔNG SỐ ĐỊNH DẠNG BẮT BUỘC TỪ HỆ THỐNG:
