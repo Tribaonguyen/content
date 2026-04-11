@@ -37,14 +37,14 @@ ${getBrandVoiceBlock()}
 
 [GIỌNG ĐIỆU TÍCH CỰC & CÂN BẰNG – BẮT BUỘC]
 - Tỷ lệ nội dung: 20% VẤN ĐỀ (nỗi đau/thách thức) → 80% GIẢI PHÁP + LỢI ÍCH + KẾT QUẢ CỤ THỂ.
-- Nếu đề cập vấn đề: chỉ 1 câu duy nhất, sau đó ngay lập tức chuyển sang giải pháp và kết quả.
+- Nếu đề cập Pain Point (nỗi đau): Hãy diễn đạt dưới dạng "Nhận định rủi ro" hoặc "Lời khuyên chuyên môn". LẬP TỨC đưa ra Giải pháp để loại bỏ cảm giác tiêu cực. KHÔNG viết kiểu hù dọa sụp đổ.
 - Giọng văn: Tin tưởng, lạc quan, truyền cảm hứng. Như một đội ngũ đã giúp trăm khách thành công – không phải giọng cảnh báo hay đe dọa.
 - Tập trung vào: Hình ảnh thành công → Cơ hội → Cam kết → CTA rõ ràng.
-- TRÁNH: Lặp lại nhiều rủi ro, liệt kê dài nhiều vấn đề, câu chữ mang tính đe dọa hay bi quan.
 
-[GIỚI HẠN NỘI DUNG – BẮT BUỘC]
-- TUYỆT ĐỐI KHÔNG viết theo hướng công kích, chỉ trích cá nhân hoặc nhóm đối tượng cụ thể (nhà thầu khác, thợ, môi giới...). Nếu đề cập rủi ro: nói về TÌNH HUỐNG, QUY TRÌNH hoặc HỆ THỐNG, không phải về Con Người.
-- Mở rộng nguồn rủi ro: ngoài yếu tố con người, hãy đề cập cả rủi ro từ pháp lý (giấy phép, PCCC), tài chính (trượt giá vật tư, dòng tiền), kỹ thuật (kết cấu, vật liệu).
+[BLACKLIST TỪ VỰNG & ANTI-AI SMELL - ÉP TUYỆT ĐỐI]
+- TỪ VỰNG & CỤM TỪ BỊ CẤM TUYỆT ĐỐI KHÔNG DÙNG DÙ ĐỂ TRONG NGOẶC KÉP: "bọn nó", "tụi nó", "thằng", "vẽ vời", "vẽ", "múa", "tiền ngu", "bài học xương máu".
+- CÁCH ĐỔI TỪ: Thay "bọn nó/tụi nó" -> "bên thứ ba/các đơn vị nhà thầu". Thay "tiền ngu" -> "chi phí cơ hội/khoản lỗ". Thay "vẽ/múa" -> "phát sinh chi phí/hạn chế rủi ro". Thay "bài học xương máu" -> "kinh nghiệm đắt giá/đúc kết".
+- Tuyệt đối KHÔNG viết theo hướng công kích, chỉ trích cá nhân hoặc nhóm đối tượng cụ thể (nhà thầu khác, thợ, môi giới...). Nếu đề cập rủi ro: nói về TÌNH HUỐNG, QUY TRÌNH hoặc HỆ THỐNG, không phải về Con Người.
 
 ${getAntiPlagiarismBlock()}
 
@@ -90,6 +90,12 @@ QUY TẮC YOAST BẮT BUỘC TRONG DÀN Ý:
 - Độ dài câu: ≤ 20 từ cho ≥ 75% số câu.
 - Từ nối chuyển tiếp (transition words) có mặt trong ≥ 30% câu/đoạn.
 - Không dùng giọng thụ động (passive voice) quá 10% số câu.
+
+━━━ GIA TĂNG GIÁ TRỊ THỰC CHIẾN (BẮT BUỘC NHƯNG VẪN ĐẢM BẢO SEO) ━━━
+BẮT BUỘC trộn và lồng ghép LỰA CHỌN PHÙ HỢP tự động (1, 2 hoặc 3) trong số các yếu tố sau vào cấu trúc các thẻ H2/H3 (Ghi chú rõ yếu tố được chọn trong dàn ý và đảm bảo tiêu đề H3 vẫn chứa Từ khóa SEO):
+1. [Data / Mini Case Study]: Đưa ra một bảng biểu so sánh hoặc số liệu thực tế (VD: Bảng so sánh chi phí, lợi nhuận trước/sau). Rất hợp bài Phân tích/Commercial.
+2. [Checklist Thực Hành]: Góc tổng hợp 3-5 bước actionable để khách hàng có thể copy/lưu về áp dụng ngay (VD: Checklist 5 bước nghiệm thu). Rất hợp bài Blog/Tips.
+3. [Góc Hỏi Khó - Chuyên Gia Đáp (F.A.Q)]: Nêu ra 1-2 câu hỏi mà chủ đầu tư sợ nhất/hay bị qua mặt nhất và trả lời trực diện theo góc nhìn Lời khuyên, không hù dọa. Thay thế cho FAQ truyền thống nhạt nhẽo.
 
 ━━━ GÓC NHÌN GỢI Ý (CHỌN 1 GÓC NHÌN XUYÊN SUỐT) ━━━
 - GÓC NHÌN CHUYÊN GIA THI CÔNG: Tiêu chuẩn kỹ thuật, vật liệu, quy trình nghiệm thu.
@@ -206,9 +212,12 @@ CHỈ LẤY PHẦN "[BÀI VIẾT HOÀN CHỈNH]" và tối ưu theo CHECKLIST YO
 ━━━ HÀNH ĐỘNG BẮT BUỘC ━━━
 1. Sửa trực tiếp bài viết theo tất cả checklist trên.
 2. Thêm 2 gợi ý [INTERNAL LINK] và 1 gợi ý [OUTBOUND LINK] vào đúng vị trí trong bài.
-3. Đảm bảo keyphrase xuất hiện tự nhiên đủ mật độ (không nhồi nhét).
+3. Đảm bảo keyphrase xuất hiện tự nhiên đủ mật độ (không nhồi nhét). Dù viết Bảng biểu hay Checklist cũng phải tuần thủ Yoast (câu < 20 chữ, dùng từ nối dẫn dắt).
 4. KIỂM TRA XƯNG HÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) → "Anh chị". Không đổi "chúng tôi".
-5. KIỂM TRA GIỌNG ĐIỆU: Xóa hoặc viết lại bất kỳ câu nào mang tính đe dọa, cảnh báo ép sợ hãi. Thay bằng lợi ích, cơ hội, kết quả thực tế.
+5. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
+   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Tự động kiểm tra và XÓA SẠCH mọi từ ngữ đe dọa, tiêu cực quá mức (VD: mất tiền oan, lừa đảo, sập tiệm).
+   - Xóa bỏ hoàn toàn mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng", "vẽ vời"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
+   - Kiểm tra kỹ các đoạn Pain Point (nỗi đau) ở phần SALE: Đảm bảo nó được trình bày văn minh dạng "Nhận định chuyên môn" và LẬP TỨC kèm Giải pháp trị liệu, triệt tiêu sự lo âu.
 
 ${getBrandVoiceBlock()}
 
