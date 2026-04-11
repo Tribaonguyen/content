@@ -61,6 +61,11 @@ export const buildPrompt1 = (topic: string, contentType: string, audience: strin
   return `
 NHIỆM VỤ BƯỚC 1: Phân tích từ khóa & lập dàn ý chuẩn Yoast SEO.
 
+QUY TẮC CỐT LÕI CHỐNG LẠC ĐỀ (BẮT BUỘC TUÂN THỦ 100%):
+1. Phân tích cực kỳ cẩn thận chủ đề "${topic}".
+2. NẾU chủ đề yêu cầu liệt kê danh sách có số lượng cụ thể (Ví dụ: "5 mẫu...", "3 cách...", "4 lý do..."), BẠN BẮT BUỘC PHẢI thiết kế dàn ý có ĐÚNG số lượng H2/H3 tương ứng đó. CẤM viết chung chung gộp lại. CẤM phớt lờ số lượng.
+3. Góc nhìn thương hiệu (dòng tiền, PCCC, tiến độ, v.v.) chỉ là "lớp gia vị" để giải thích cho các hạng mục đó, TUYỆT ĐỐI KHÔNG lấy "gia vị" làm nhân vật chính thay cho chủ đề gốc.
+
 CHỦ ĐỀ BÀI VIẾT: "${topic}"${contentTypeNote}${audienceNote}
 Trang web: xaynhatocdo.com – Thầu thi công nhà ở, CHDV, phòng trọ tại TP.HCM.
 
@@ -110,7 +115,12 @@ ${
 - GÓC NHÌN CỦA CHỦ ĐẦU TƯ: Bài toán dòng tiền, an toàn pháp lý PCCC, tỷ suất lợi nhuận.
 - GÓC NHÌN THỊ TRƯỜNG: Đánh giá xu hướng khu vực, xu hướng thiết kế nội thất tối ưu cho thuê.
 
-TRẢ VỀ:
+TRẢ VỀ CHO TÔI THEO FORMAT DƯỚI ĐÂY:
+
+[PHÂN TÍCH ĐỀ BÀI]
+- Yêu cầu cốt lõi của chủ đề: ...
+- Số lượng hạng mục cần liệt kê (nếu chủ đề yêu cầu số lượng, vd 3 cách, 5 mẫu): ... (TUYỆT ĐỐI PHẢI TUÂN THỦ TRONG DÀN Ý).
+
 [PHÂN TÍCH TỪ KHÓA]
 - Focus Keyphrase: ...
 - Từ khóa phụ: ...
@@ -134,6 +144,7 @@ ${step1}
 """
 
 YÊU CẦU VIẾT BÀI – TỪNG TIÊU CHÍ YOAST READABILITY:
+(BỎ QUA phần [PHÂN TÍCH ĐỀ BÀI] nếu có, chỉ dùng để định hướng. BẮT ĐẦU viết từ phần DÀN Ý CHI TIẾT.)
 
 ✅ 1. ĐỘ DÀI CÂU (Sentence Length – Yoast mục tiêu: ≤ 25% câu > 20 từ):
    - Câu tối đa 20 từ. Nếu ý quá phức tạp, tách thành 2 câu ngắn.
