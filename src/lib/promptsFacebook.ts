@@ -132,8 +132,10 @@ export function getSystemPromptFB(audience: string, knowledgeBase?: string) {
 - KHÔNG dùng mẫu dẫn như "Theo", "Còn theo nhiều nguồn". Viết như người trong ngành tự đúc kết.
 - KHÔNG viết dài dòng. Mỗi ý chỉ cần 1 câu súc tích. Cắt bỏ mọi phần giải thích thừa.
 ${kbContext}
-[TỪ VỰNG CẤM DÙNG - ANTI-AI SMELL]
-Tuyệt đối KHÔNG dùng: "Hành trình", "Tuyệt vời", "Hoàn hảo", "Khám phá ngay", "Cùng tìm hiểu", "Không thể phủ nhận", "Hứa hẹn", "Một bức tranh", "Nâng tầm". Dùng từ ngữ đời thường của giới đầu tư và kỹ sư xây dựng.
+[BLACKLIST TỪ VỰNG & ANTI-AI SMELL - ÉP TUYỆT ĐỐI]
+- TỪ VỰNG & CỤM TỪ BỊ CẤM TUYỆT ĐỐI KHÔNG DÙNG DÙ ĐỂ TRONG NGOẶC KÉP: "bọn nó", "tụi nó", "thằng", "vẽ vời", "vẽ", "múa", "tiền ngu", "bài học xương máu".
+- CÁCH ĐỔI TỪ: Thay "bọn nó/tụi nó" -> "bên thứ ba/các đơn vị". Thay "tiền ngu" -> "chi phí cơ hội/khoản lỗ". Thay "vẽ/múa" -> "phát sinh chi phí/hạn chế rủi ro". Thay "bài học xương máu" -> "kinh nghiệm đắt giá/đúc kết".
+- Tuyệt đối KHÔNG dùng: "Hành trình", "Tuyệt vời", "Hoàn hảo", "Khám phá ngay", "Cùng tìm hiểu", "Không thể phủ nhận", "Hứa hẹn", "Một bức tranh", "Nâng tầm". Dùng từ ngữ đời thường của giới đầu tư và kỹ sư xây dựng.
 [TỆP KHÁCH HÀNG MỤC TIÊU CỦA BÀI NÀY]
 ${audience ? '- Định hướng giọng điệu: ' + audience + '.' : '- Định hướng giọng điệu: Thân thiện, gần gũi, tập trung vào lợi ích và giải pháp thực tế cho Anh chị.'}
 
@@ -207,9 +209,10 @@ YÊU CẦU ÉP KHUÔN:
 4. Kiểm tra và XÓA SẠCH các từ cấm: Hành trình, khám phá, tuyệt vời, nâng tầm... Thay bằng ngôn ngữ đời thường, cụ thể.
 5. KIỂM TRA XƯNG HÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) → "Anh chị". Giữ nguyên "chúng tôi".
 
-KIỂM TRA GIỌNG ĐIỆU:
+KIỂM TRA GIỌNG ĐIỆU VÀ ĐỊNH DẠNG HÌNH ẢNH:
 🚫 Xóa hoặc làm nhẹ bất kỳ câu nào mang tính đe dọa, cảnh báo ép sợ hãi ("có đang bị...", "coi chừng...", "nguy hiểm...").
 ✅ Thay bằng giọng tích cực: lợi ích đạt được, cơ hội, kết quả thực tế.
+🚫 TUYỆT ĐỐI KHÔNG tự bịa ra những câu như "Anh chị xem hình ảnh bên dưới", "Dưới đây là hình ảnh thực tế", "👉 Chi tiết xem ảnh". Hệ thống sẽ tự động ghép ảnh sau, KHÔNG ĐƯỢC CHÈN VĂN BẢN ĐIỀU HƯỚNG MẮT.
 
 KIỂM TRA CHẤT LƯỢNG 4C TRƯỚC KHI TRẢ VỀ:
 ✅ Clear – Mỗi câu đọc 1 lần là hiểu ngay, không mơ hồ.
