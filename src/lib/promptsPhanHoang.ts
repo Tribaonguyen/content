@@ -32,8 +32,9 @@ export function getSystemPromptPH(audience: string, knowledgeBase?: string) {
 
 [BRAND VOICE - BỘ GEN THƯƠNG HIỆU]
 - Xưng hô: Luôn tự xưng là "Tôi" hoặc "Hoàng". Gọi người đọc là "Anh em" hoặc "Các bạn". TUYỆT ĐỐI KHÔNG xưng "em", "mình" (với vị thế thấp) hoặc "bạn" (số ít).
-- Đặc trưng ngôn từ: Thẳng thắn, dí dỏm, súc tích. BẮT BUỘC dùng con số thực tế để chứng minh (VD: "Thiết kế 15 phòng", "Lợi nhuận 12%/năm"). KHÔNG nói đạo lý.
+- Đặc trưng ngôn từ: Thẳng thắn, dí dỏm, súc tích. BẮT BUỘC dùng con số thực tế để chứng minh (số phòng, tỷ suất lợi nhuận, chi phí thi công, tiến độ thu hồi vốn...) bám sát chủ đề bài viết. KHÔNG nói đạo lý.
 - Cấu trúc tư duy: Luôn đúc kết vấn đề.
+- TUYỆT ĐỐI KHÔNG lặp lại số liệu, ví dụ, hoặc case study đã dùng ở bài trước. Mỗi bài viết PHẢI có dữ liệu và ví dụ độc lập, bám sát đúng chủ đề được giao.
 
 [TỪ VỰNG CẤM DÙNG - ANTI-AI SMELL]
 - KHÔNG dùng các từ khẳng định sáo rỗng đậm mùi AI: "Chắc chắn", "Hãy", "Đừng", "Xem thêm", "Khám phá".
@@ -98,6 +99,7 @@ Chỉ trả về văn bản bài viết đã được thổi hồn.`.trim();
 
 export function buildPrompt4PH(step3: string, contentTypeCode: string) {
   const spec = CONTENT_SPECS_PH[contentTypeCode];
+  if (!spec) return '';
   return `NHIỆM VỤ BƯỚC 4: Chốt hạ, format hiển thị và Kêu gọi hành động.
 
 THÔNG SỐ ĐỊNH DẠNG BẮT BUỘC TỪ HỆ THỐNG:

@@ -4,7 +4,7 @@ import { JWT } from 'google-auth-library';
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { saJson, region, model, systemPrompt, userPrompt } = body;
+    const { saJson, region, model, systemPrompt, userPrompt, enableGoogleSearch } = body;
 
     if (!saJson) {
       return NextResponse.json({ error: 'Missing Service Account JSON' }, { status: 400 });
@@ -29,10 +29,13 @@ export async function POST(req: Request) {
 
     const apiUrl = `https://${region}-aiplatform.googleapis.com/v1/projects/${project_id}/locations/${region}/publishers/google/models/${model}:generateContent`;
 
+    const tools = enableGoogleSearch ? [{ googleSearch: {} }] : [];
+
     const payload = {
       systemInstruction: { parts: [{ text: systemPrompt }] },
       contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
-      generationConfig: { temperature: 0.7, responseMimeType: 'text/plain' }
+      generationConfig: { temperature: 0.8, responseMimeType: 'text/plain' },
+      ...(tools.length > 0 ? { tools } : {})
     };
 
     const response = await fetch(apiUrl, {

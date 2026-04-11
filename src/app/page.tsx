@@ -92,7 +92,7 @@ export default function Dashboard() {
     localStorage.setItem('article_tasks', JSON.stringify(updated));
   };
 
-  const callVertexAI = async (systemPrompt: string, userPrompt: string, retryCount = 0): Promise<string> => {
+  const callVertexAI = async (systemPrompt: string, userPrompt: string, retryCount = 0, enableGoogleSearch = false): Promise<string> => {
     try {
       if (!config.saJson) throw new Error("Chưa cấu hình SA JSON!");
       const res = await fetch('/api/generate', {
@@ -103,7 +103,8 @@ export default function Dashboard() {
           region: config.region,
           model: config.model,
           systemPrompt,
-          userPrompt
+          userPrompt,
+          enableGoogleSearch
         })
       });
       const data = await res.json();
@@ -111,7 +112,7 @@ export default function Dashboard() {
         if (res.status === 429 && retryCount < 3) {
            console.warn(`Lỗi 429 - Rate Limit. Tự động thử lại lần ${retryCount + 1}...`);
            await delay((retryCount + 1) * 15000);
-           return callVertexAI(systemPrompt, userPrompt, retryCount + 1);
+           return callVertexAI(systemPrompt, userPrompt, retryCount + 1, enableGoogleSearch);
         }
         throw new Error(data.error);
       }
@@ -156,7 +157,8 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptWeb(task.knowledgeBase);
 
         updateTaskState(id, { currentStep: 1 });
-        const step1Text = await callVertexAI(sysPrompt, buildPrompt1(task.topic, task.contentType || '', task.audience));
+        // Bật Google Search cho Bước 1 để lấy dữ liệu thực từ internet
+        const step1Text = await callVertexAI(sysPrompt, buildPrompt1(task.topic, task.contentType || '', task.audience), 0, true);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
 
@@ -183,7 +185,8 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptFB(task.audience, task.knowledgeBase);
         
         updateTaskState(id, { currentStep: 1 });
-        const step1Text = await callVertexAI(sysPrompt, buildPrompt1FB(task.topic, task.contentType || ''));
+        // Bật Google Search cho Bước 1 để lấy dữ liệu BĐS thực từ internet
+        const step1Text = await callVertexAI(sysPrompt, buildPrompt1FB(task.topic, task.contentType || ''), 0, true);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
 
@@ -210,7 +213,8 @@ export default function Dashboard() {
         const sysPrompt = getSystemPromptPH(task.audience, task.knowledgeBase);
         
         updateTaskState(id, { currentStep: 1 });
-        const step1Text = await callVertexAI(sysPrompt, buildPrompt1PH(task.topic, task.contentType || ''));
+        // Bật Google Search cho Bước 1 để lấy dữ liệu BĐS thực từ internet
+        const step1Text = await callVertexAI(sysPrompt, buildPrompt1PH(task.topic, task.contentType || ''), 0, true);
         updateTaskState(id, { output1: step1Text });
         await delay(3000);
 
