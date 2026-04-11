@@ -244,47 +244,40 @@ Chủ đề: "${topic}"
 ${step3}
 """
 
-YÊU CẦU ĐÓNG GÓI:
+YÊU CẦU ĐÓNG GÓI BẮT BUỘC (LÀM LẦN LƯỢT TIẾN TRÌNH SAU):
 
-1. CHUYỂN ĐỔI SANG HTML SẠCH: Dùng đúng các thẻ sau để copy/paste thẳng vào WordPress Block Editor hoặc Classic Editor:
-   - <h1> cho tiêu đề chính (chỉ 1 thẻ duy nhất)
-   - <h2> và <h3> cho các mục con
-   - <p> cho đoạn văn
-   - <ul><li> cho danh sách
-   - <strong> cho từ/cụm từ cần nhấn mạnh
+BƯỚC 4.1: CHUYỂN ĐỔI SANG HTML SẠCH
+  Chuyển toàn bộ bài viết sang HTML. ĐƯỢC PHÉP dùng các thẻ sau: h1, h2, h3, p, ul, ol, li, strong, a, div, span, sup.
+  CẤM DÙNG THẺ COMMENT <!-- --> DƯỚI MỌI HÌNH THỨC.
 
-2. CHÈN VỊ TRÍ ẢNH CHUẨN HTML: KHÔNG dùng thẻ comment <!-- -->. Tại mỗi đoạn cần chèn ảnh (4-6 vị trí xen kẽ), BẮT BUỘC nhúng khối <div> sau vào trong HTML:
-   <div style="background:#fff3cd; padding:10px; border-left:4px solid #ffbb00; margin: 15px 0;">
-     <strong>[VỊ TRÍ ẢNH SỐ X]</strong><br/>
-     - Tên file: (ký-tự-thường-gạch-ngang-chua-tu-khoa.jpg)<br/>
-     - Alt text: (Chứa keyphrase, mô tả đúng nội dung, ≤ 125 ký tự)<br/>
-     - Caption: (1 câu súc tích chứa keyphrase hoặc từ khóa phụ)
-   </div>
+BƯỚC 4.2: CHÈN BẢNG MỤC LỤC (TOC) VÀO SAU MỞ BÀI
+  Ngay dưới đoạn Mở bài (dưới thẻ <h1> và các thẻ <p> mở bài đầu tiên), TẠO VÀ CHÈN THEO ĐÚNG MÃ HTML NÀY:
+  <div style="background-color: #f4f4f4; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
+    <strong>Nội dung bài viết:</strong>
+    <ul>
+      <li><a href="#muc-1">1. [Tiêu đề H2 số 1]</a></li>
+      <li><a href="#muc-2">2. [Tiêu đề H2 số 2]</a></li>
+    </ul>
+  </div>
+  Và bạn PHẢI gắn id="muc-1", id="muc-2"... vào các thẻ <h2> tương ứng trong bài để click được.
 
-3. TẠO BẢNG CHỈ MỤC (TOC - TABLE OF CONTENTS):
-   Ngay dưới thẻ <h1> và 1-2 đoạn văn mở bài, TUYỆT ĐỐI KHÔNG ĐƯỢC QUÊN chèn đoạn mã HTML tạo Mục lục này:
-   <div style="background-color: #f4f4f4; border: 1px solid #ddd; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
-     <strong>Nội dung bài viết:</strong>
-     <ul>
-       <li><a href="#muc-1">1. [Tiêu đề H2 số 1]</a></li>
-       <li><a href="#muc-2">2. [Tiêu đề H2 số 2]</a></li>
-     </ul>
-   </div>
-   Và BẮT BUỘC thêm id nhảy link (ví dụ: <h2 id="muc-1">...</h2>) cho toàn bộ các thẻ <h2> phía dưới để Mục lục hoạt động.
+BƯỚC 4.3: TỰ ĐỘNG SÁNG TÁC & CHÈN 4-6 KHỐI ẢNH (BẮT BUỘC)
+  Xen kẽ dưới các thẻ <h2> hoặc <h3> trong bài, bạn PHẢI TỰ NGHĨ RA nội dung cho 4-6 bức ảnh và nhúng chúng bằng MÃ HTML DIV SAU ĐÂY (không dùng thẻ img):
+  <div style="background:#fff3cd; padding:10px; border-left:4px solid #ffbb00; margin: 15px 0;">
+    <strong>[VỊ TRÍ ẢNH SỐ X]</strong><br/>
+    - Tên file: (viet-chu-thuong-gach-ngang-chua-tu-khoa.jpg)<br/>
+    - Alt text: (Mô tả nội dung ảnh, chứa keyphrase)<br/>
+    - Caption: (Chú thích ảnh hấp dẫn)
+  </div>
 
-4. BỘ META YOAST: Cung cấp đầy đủ để điền vào Yoast SEO Plugin:
-   - SEO Title: ≤ 60 ký tự | Bắt đầu bằng keyphrase | Kết thúc bằng "– Xây Nhà Tốc Độ"
-   - Meta Description: 120–156 ký tự | Chứa keyphrase | Có con số cụ thể | CTA click
-   - Focus Keyphrase: (Chính xác từ khóa đã dùng xuyên suốt)
-   - URL Slug: (tu-khoa-chinh-ngan-gon, không có stop words)
-   - Cornerstone Content: Có / Không (Đề xuất)
+BƯỚC 4.4: XỬ LÝ NGUỒN TÁC GIẢ (FOOTNOTE / OUTBOUND LINK)
+  - Trong bài viết, đánh số trích dẫn kế bên số liệu bằng thẻ <sup>[1]</sup>.
+  - Ở DƯỚI CÙNG đáy bài viết, tạo thêm mục:
+    <h3><strong>Nguồn tham khảo</strong></h3>
+    <p>[1] Tham khảo từ: <a href="[URL Uy Tín]" target="_blank" rel="nofollow">[Tên website / Báo cáo / Tác giả]</a></p>
 
-5. XỬ LÝ NGUỒN TÁC GIẢ (OUTBOUND LINK):
-   - Thay vì liệt kê Outbound link ở Meta râu ria, hãy CHÈN TRỰC TIẾP VÀO HTML. 
-   - Trong văn bản đoạn nào nhắc đến số liệu, thêm số trích dẫn superscript, ví dụ: <sup>[1]</sup>.
-   - Ở vị trí CUỐI CÙNG của bài viết (dưới cùng), chèn mục Nguồn tham khảo:
-     <h3><strong>Nguồn tham khảo</strong></h3>
-     <p>[1] Tác giả / Nguồn: <a href="[URL OUTBOUND LINK UY TÍN]" target="_blank" rel="nofollow">Tiêu đề bài viết tham khảo</a></p>
+BƯỚC 4.5: LÊN BỘ META YOAST SEO
+  (Cung cấp Title, Meta Description, URL Slug, Focus Keyphrase)
 
 ${getBrandVoiceBlock()}
 
