@@ -10,8 +10,8 @@ export const WEB_CONTENT_TYPES = [
 function getBrandVoiceBlock() {
   return `
 [BRAND VOICE – XÂY NHÀ TỐC ĐỘ]
-- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách → "Anh/Chị". TUYỆT ĐỐI không dùng "em", "mình", "bạn".
-- Giọng điệu: Đanh thép, trực diện, nói bằng số thực tế (tiền – thời gian – rủi ro). Không hoa mỹ, không đạo lý.
+- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách → "Anh chị". TUYỆT ĐỐI không dùng "em", "mình", "bạn".
+- Giọng điệu: Thân thiện, gần gũi, vui vẻ — như người bạn chuyên môn đang tư vấn thật lòng. Trực diện nhưng không gắt, không cảnh báo đe dọa. Nói bằng số thực tế (tiền – thời gian – lợi ích). Không hoa mỹ, không đạo lý.
 - Cam kết cốt lõi: Không phát sinh chi phí | Đúng tiến độ | Chuẩn pháp lý PCCC.`.trim();
 }
 
