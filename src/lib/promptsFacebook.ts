@@ -225,16 +225,22 @@ Chỉ trả về văn bản bài viết đã được thổi hồn.`.trim();
 
 // ─── BƯỚC 4: FORMAT FACEBOOK + CTA ───────────────────────────────────────────
 
-export function buildPrompt4FB(step3: string, contentTypeCode: string) {
+export function buildPrompt4FB(topic: string, step3: string, contentTypeCode: string) {
   const spec = CONTENT_SPECS[contentTypeCode];
   if (!spec) return '';
   return `NHIỆM VỤ BƯỚC 4: Chốt hạ, format hiển thị và Kêu gọi hành động.
 
-THÔNG SỐ ĐỊNH DẠNG BẮT BUỘC TỪ HỆ THỐNG:
+THÔNG SỐ BẮT BUỘC TỪ HỆ THỐNG:
+- Chủ đề gốc: "${topic}"
 - Loại bài: ${spec.label}
 - Giới hạn độ dài: ${CAPTION_GUIDE[spec.caption]}
 - Mức độ CTA: ${CTA_GUIDE[spec.cta]}
 - Định mức Media: ${spec.img} ảnh (Video: ${spec.video})
+
+KIỂM TRA NEO CHỦ ĐỀ (LÀM TRƯỚC KHI FORMAT):
+Đọc lại toàn bộ bài viết Bước 3 bên dưới. Đặt câu hỏi: "Bài này có đang đúng chủ đề '${topic}' không?"
+- Nếu có đoạn Nào đang lạc sang chủ đề khác: Sửa lại đoạn đó trước, rồi mới tiến hành format.
+- KHÔNG được phép biên tập làm thay đổi chủ đề sang hướng khác. Nếu bài vẫn đúng chủ đề: tiếp tục format bình thường.
 
 [BÀI VIẾT BƯỚC 3]:
 """

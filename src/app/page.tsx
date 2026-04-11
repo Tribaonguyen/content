@@ -201,7 +201,7 @@ export default function Dashboard() {
         await delay(3000);
 
         updateTaskState(id, { currentStep: 4 });
-        const step4Text = await callVertexAI(sysPrompt, buildPrompt4FB(step3Text, task.contentType || ''));
+        const step4Text = await callVertexAI(sysPrompt, buildPrompt4FB(task.topic, step3Text, task.contentType || ''));
         updateTaskState(id, { output4: step4Text });
         await delay(3000);
 
