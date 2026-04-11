@@ -152,10 +152,18 @@ export function buildPrompt1FB(topic: string, contentTypeCode: string) {
 - Chủ đề: "${topic}"
 - Độ dài dự kiến: ${CAPTION_GUIDE[spec.caption]}
 
-QUY TẮc CỐT LÕI - ĐỌC KỸ TRƯỚC KHI VIẾT:
-1. Chủ đề "${topic}" là NHÂN VẬT CHÍNH của bài. Bài viết PHẢI nói về nó — không được thay bằng ngõ khác dù rất liên quan.
-2. Nếu chủ đề có con số (VD: "5 mẫu", "3 cách", "4 lý do"): PHẢI liệt kê ĐỦ số lượng đó với nội dung phân biệt nhau. Tuyệt đối KHÔNG còn lưới mà gộp lại hoặc viết chung chung.
-3. Góc nhìn thương hiệu (dòng tiền, PCCC, tiến độ) chỉ được xuất hiện như lớp kết nối phụ ơ cuối mỗi điểm — KHÔNG được thay thế nội dung chính.
+QUY TẮC CỐT LÕI CHỐNG LẠC ĐỀ (BẮT BUỘC TUÂN THỦ 100%):
+1. Phân tích cực kỳ cẩn thận chủ đề "${topic}".
+2. NẾU chủ đề yêu cầu liệt kê danh sách có số lượng cụ thể (Ví dụ: "5 mẫu...", "3 cách...", "4 lý do..."), BẠN BẮT BUỘC PHẢI chia thân bài thành ĐÚNG số lượng đó (Mục 1, Mục 2... Mục X). CẤM viết chung chung gộp lại. CẤM phớt lờ số lượng.
+3. Góc nhìn thương hiệu (dòng tiền, PCCC, tiến độ, v.v.) chỉ là "lớp gia vị" để giải thích, phân tích cho các hạng mục đó, TUYỆT ĐỐI KHÔNG lấy "gia vị" làm nhân vật chính thay cho chủ đề gốc.
+
+Khi trả kết quả, BẠN PHẢI BẮT ĐẦU BẰNG PHẦN PHÂN TÍCH ĐỀ BÀI như sau:
+[PHÂN TÍCH ĐỀ BÀI]
+- Yêu cầu cốt lõi của chủ đề: ...
+- Số lượng hạng mục cần liệt kê (nếu có): ...
+
+[BẢN NHÁP BÀI VIẾT]
+(Bắt đầu viết nháp tại đây...)
 
 ${getFrameworkFB(contentTypeCode)}
 
@@ -184,18 +192,20 @@ export function buildPrompt2FB(step1: string, contentTypeCode: string) {
 ${step1}
 """
 
-YÊU CẦU:
-1. Viết lại bản nháp trên, đắp thêm "thịt" cho các ý. Độ dài theo chuẩn: ${CAPTION_GUIDE[spec.caption]}
-2. 3 DÒNG ĐẦU TIÊN (HOOK) phải thu hút ngay. Chọn 1 trong các kiểu hook sau:
+YÊU CẦU ĐỐI VỚI BẢN NHÁP MỚI:
+1. BỎ QUA hoàn toàn phần [PHÂN TÍCH ĐỀ BÀI] (nếu có). Chỉ lấy nội dung từ [BẢN NHÁP BÀI VIẾT] để đắp thêm "thịt" cho các ý. Độ dài theo chuẩn: ${CAPTION_GUIDE[spec.caption]}
+2. Nếu bài nháp có số lượng mục cụ thể (vd: Mục 1, Mục 2, Mục 3), BẮT BUỘC GIỮ NGUYÊN SỐ LƯỢNG ĐÓ. Không được gộp chung.
+3. 3 DÒNG ĐẦU TIÊN (HOOK) phải thu hút ngay. Chọn 1 trong các kiểu hook sau:
    a) Kết quả đầu ra: "Biến mảnh đất [X] thành tòa CHDV mang về [Y triệu/tháng]..."
    b) Câu hỏi khơi gợi: "Anh chị đã tính toán kỹ bài toán chống trượt giá vật tư khi xây CHDV chưa?"
    c) Sự thật ngược chiều (bất ngờ tích cực): "Nhiều người nghĩ xin phép PCCC rất phức tạp — nhưng thực ra chỉ cần đi đúng quy trình tiêu chuẩn."
    d) Câu chuyện ngắn: "Hôm qua tư vấn cho anh khách ở Gò Vấp, anh hỏi Xây Nhà Tốc Độ 1 câu..."
    KHÔNG dùng hook đe dọa nỗi sợ hay công kích cá nhân/nhóm nghề.
-3. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng giá trị!
-4. KIỂM TRA XƯNG NGÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) bằng "Anh chị" (không gạch chéo).
+4. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng giá trị!
+5. KIỂM TRA XƯNG NGÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) bằng "Anh chị" (không gạch chéo).
+6. CHIA ĐOẠN ĐỂ ĐỌC TRÊN MOBILE: Mỗi đoạn văn tối đa 2-3 câu. Tách đoạn thường xuyên.
 
-Chỉ trả về văn bản nội dung.`.trim();
+Chỉ trả về văn bản nội dung. KHÔNG BAO GỒM phần KHUNG PHÂN TÍCH.`.trim();
 }
 
 // ─── BƯỚC 3: HUMANIZE + 4C QUALITY CHECK ─────────────────────────────────────
@@ -224,6 +234,7 @@ KIỂM TRA CHẤT LƯỢNG 4C TRƯỚC KHI TRẢ VỀ:
 ✅ Concise – Không câu nào thừa. Cắt bỏ nếu xóa đi bài vẫn đủ nghĩa.
 ✅ Compelling – Có ít nhất 1 yếu tố tạo cảm xúc tích cực: con số ấn tượng, kết quả thực tế, câu hỏi gợi mở.
 ✅ Credible – Có ít nhất 1 con số/dữ liệu cụ thể làm bằng chứng.
+🚫 TUYỆT ĐỐI KHÔNG CHÈN HASHTAG (#) vào cuối bài ở bước này.
 
 Chỉ trả về văn bản bài viết đã được thổi hồn.`.trim();
 }
@@ -254,10 +265,11 @@ ${step3}
 
 YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
 1. KỶ LUẬT ĐỘ DÀI: Tuân thủ tuyệt đối [Giới hạn độ dài] đã giao. Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập, cắt tỉa lại cho gọn. Nếu quá ngắn, hãy làm rõ ý hơn nhưng tuyệt đối không lan man.
-2. ÉP BỐ CỤC MOBILE:
+2. ÉP BỐ CỤC MOBILE VÀ ĐỊNH DẠNG:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn).
-   - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt, dễ quét bằng mắt (scan) trên màn hình điện thoại.
+   - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt.
+   - BẮT BUỘC KHÔNG DÙNG Markdown in đậm (**text**). Facebook không hỗ trợ tính năng này. Thay vào đó, hãy VIẾT HOA NHỮNG TỪ CẦN NHẤN MẠNH.
 3. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
    - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Tự động kiểm tra và XÓA SẠCH mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền oan, bạc tóc, lừa đảo).
    - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng", "vẽ vời"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".

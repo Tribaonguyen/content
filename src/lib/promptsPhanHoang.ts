@@ -148,10 +148,18 @@ export function buildPrompt1PH(topic: string, contentTypeCode: string) {
 - Chủ đề: "${topic}"
 - Độ dài dự kiến: ${CAPTION_GUIDE[spec.caption]}
 
-QUY TẮc CỐT LÕI - ĐỌC KỸ TRƯỚC KHI VIẾT:
-1. Chủ đề "${topic}" là NHÂN VẬT CHÍNH của bài. Bài viết PHẢI nói về nó — không được thay bằng ngõ khác dù rất liên quan.
-2. Nếu chủ đề có con số (VD: "5 mẫu", "3 cách", "4 lý do"): PHẢI liệt kê ĐỦ số lượng đó với nội dung phân biệt nhau. Tuyệt đối KHÔNG gộp lại hoặc viết chung chung.
-3. Góc nhìn thương hiệu (dòng tiền, pháp lý, tiến độ) chỉ được xuất hiện như lớp kết nối phụ ở cuối mỗi điểm — KHÔNG được thay thế nội dung chính.
+QUY TẮC CỐT LÕI CHỐNG LẠC ĐỀ (BẮT BUỘC TUÂN THỦ 100%):
+1. Phân tích cực kỳ cẩn thận chủ đề "${topic}".
+2. NẾU chủ đề yêu cầu liệt kê danh sách có số lượng cụ thể (Ví dụ: "5 mẫu...", "3 cách...", "4 lý do..."), BẠN BẮT BUỘC PHẢI chia thân bài thành ĐÚNG số lượng đó (Mục 1, Mục 2... Mục X). CẤM viết chung chung gộp lại. CẤM phớt lờ số lượng.
+3. Góc nhìn thương hiệu (dòng tiền, pháp lý, tiến độ, v.v.) chỉ là "lớp gia vị" để giải thích, phân tích cho các hạng mục đó, TUYỆT ĐỐI KHÔNG lấy "gia vị" làm nhân vật chính thay cho chủ đề gốc.
+
+Khi trả kết quả, BẠN PHẢI BẮT ĐẦU BẰNG PHẦN PHÂN TÍCH ĐỀ BÀI như sau:
+[PHÂN TÍCH ĐỀ BÀI]
+- Yêu cầu cốt lõi của chủ đề: ...
+- Số lượng hạng mục cần liệt kê (nếu có): ...
+
+[BẢN NHÁP BÀI VIẾT]
+(Bắt đầu viết nháp tại đây...)
 
 ${getFrameworkPH(contentTypeCode)}
 
@@ -180,18 +188,20 @@ export function buildPrompt2PH(step1: string, contentTypeCode: string) {
 ${step1}
 """
 
-YÊU CẦU:
-1. Viết lại bản nháp trên, đắp thêm "thịt" cho các ý. Độ dài theo chuẩn: ${CAPTION_GUIDE[spec.caption]}
-2. 3 DÒNG ĐẦU TIÊN (HOOK) phải gây tò mò ngay. Chọn 1 trong các kiểu hook sau:
+YÊU CẦU ĐỐI VỚI BẢN NHÁP MỚI:
+1. BỎ QUA hoàn toàn phần [PHÂN TÍCH ĐỀ BÀI] (nếu có). Chỉ lấy nội dung từ [BẢN NHÁP BÀI VIẾT] để đắp thêm "thịt" cho các ý. Độ dài theo chuẩn: ${CAPTION_GUIDE[spec.caption]}
+2. Nếu bài nháp có số lượng mục cụ thể (vd: Mục 1, Mục 2, Mục 3), BẮT BUỘC GIỮ NGUYÊN SỐ LƯỢNG ĐÓ. Không được gộp chung.
+3. 3 DÒNG ĐẦU TIÊN (HOOK) phải gây tò mò ngay. Chọn 1 trong các kiểu hook sau:
    a) Kết quả đầu ra: "Anh em này chuyển [X tỷ] sang CHDV — thu hồi xong trong [Y tháng]."
    b) Câu hỏi khơi gợi: "Anh em đã bao giờ tính toán mình đang bỏ lỡ bao nhiêu mỗi tháng chưa?"
    c) Sự thật ngược chiều (bất ngờ tích cực): "Đa số người sợ đầu tư CHDV vì nghĩ phức tạp — nhưng thực ra đây là mô hình đơn giản nhất mình đã làm."
    d) Câu chuyện ngắn: "Một số ae nhắn hỏi mình về [chủ đề]. Mình chia sẻ như này..."
    KHÔNG dùng hook đe dọa nỗi sợ hay công kích cá nhân/nhóm nghề.
-3. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng vấn đề!
-4. KIỂM TRA XƯNG NGÔ: Thay toàn bộ "Tôi" / "tôi" bằng "mình" hoặc "Hoàng".
+4. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng vấn đề!
+5. KIỂM TRA XƯNG NGÔ: Thay toàn bộ "Tôi" / "tôi" bằng "mình" hoặc "Hoàng".
+6. CHIA ĐOẠN ĐỂ ĐỌC TRÊN MOBILE: Mỗi đoạn văn tối đa 2-3 câu. Tách đoạn thường xuyên.
 
-Chỉ trả về văn bản nội dung.`.trim();
+Chỉ trả về văn bản nội dung. KHÔNG BAO GỒM phần KHUNG PHÂN TÍCH.`.trim();
 }
 
 export function buildPrompt3PH(step2: string) {
@@ -212,6 +222,7 @@ KIỂM TRA GIỌNG ĐIỆU VÀ ĐỊNH DẠNG HÌNH ẢNH:
 🚫 Xóa bỏ hoàn toàn góc nhìn "Chống lại nhà thầu/thợ". Thay đổi từ góc độ phòng thủ sang "Phối hợp giám sát minh bạch, bảo vệ dòng tiền".
 ✅ Thay bằng giọng tích cực: lợi ích đạt được, cơ hội, giải pháp hệ thống.
 🚫 TUYỆT ĐỐI KHÔNG tự bịa ra những câu như "Anh em xem hình ảnh bên dưới", "Dưới đây là hình ảnh thực tế", "👉 Chi tiết xem ảnh". Hệ thống sẽ tự động ghép ảnh sau, KHÔNG ĐƯỢC CHÈN VĂN BẢN ĐIỀU HƯỚNG MẮT.
+🚫 TUYỆT ĐỐI KHÔNG CHÈN HASHTAG (#) vào cuối bài ở bước này.
 
 Chỉ trả về văn bản bài viết đã được thổi hồn.`.trim();
 }
@@ -240,10 +251,11 @@ ${step3}
 
 YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
 1. KỶ LUẬT ĐỘ DÀI: Tuân thủ tuyệt đối [Giới hạn độ dài] đã giao. Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập, cắt tỉa lại cho gọn. Nếu quá ngắn, hãy làm rõ ý hơn nhưng tuyệt đối không lan man.
-2. ÉP BỐ CỤC MOBILE:
+2. ÉP BỐ CỤC MOBILE VÀ ĐỊNH DẠNG:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn). 
-   - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt, dễ quét bằng mắt (scan) trên màn hình điện thoại.
+   - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt.
+   - BẮT BUỘC KHÔNG DÙNG Markdown in đậm (**text**). Facebook không hỗ trợ tính năng này. Thay vào đó, hãy VIẾT HOA NHỮNG TỪ CẦN NHẤN MẠNH.
 3. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
    - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Tự động kiểm tra và XÓA SẠCH mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền oan, bạc tóc, lừa đảo, lỗ sấp mặt).
    - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng", "vẽ vời"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
