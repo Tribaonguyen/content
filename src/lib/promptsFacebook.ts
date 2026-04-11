@@ -217,12 +217,12 @@ export function buildPrompt3FB(step2: string) {
 ${step2}
 """
 
-YÊU CẦU ÉP KHUÔN:
-1. Đóng vai một kỹ sư trưởng đang ngồi tư vấn thân thiện với chủ đầu tư — vui vẻ, gần gũi, không gắt.
-2. CẮT GỌN CÂU: Không để câu quá dài. Cứ 15-20 chữ phải ngắt nhịp hoặc chấm câu.
-3. THÊM TÍNH THỰC CHIẾN: Bổ sung 1 ví dụ thực tế hoặc 1 con số cụ thể làm minh chứng (nếu chủ đề cho phép).
-4. Kiểm tra và XÓA SẠCH các từ cấm: Hành trình, khám phá, tuyệt vời, nâng tầm... Thay bằng ngôn ngữ đời thường, cụ thể.
-5. KIỂM TRA XƯNG HÔ: Đảm bảo khách hàng được gọi là "Anh chị". Giữ nguyên "chúng tôi". TUYỆT ĐỐI CẤM ký tự gạch chéo.
+YÊU CẦU ÉP KHUÔN ĐỂ VƯỢT QUA AI DETECTOR (CHỐNG MÁY MÓC):
+1. GIỌNG VĂN THỰC TẾ: Đóng vai một kỹ sư trưởng đang ngồi tư vấn thân thiện với chủ đầu tư. Không dùng từ bác học hay văn phong hành chính trịnh trọng. Viết đúng kiểu người thật đang chia sẻ kinh nghiệm.
+2. BẺ GÃY NHỊP ĐIỆU (BURSTINESS): Bắt buộc xen kẽ các câu cực ngắn (4-8 chữ) ngay sau các câu dài. Ví dụ: "Đất hẻm nhỏ xây rất cực. Nhưng bù lại bài toán dòng tiền lại cực kỳ an toàn." KHÔNG viết tất cả các câu dài đều đều nhau.
+3. CẤM LIÊN TỪ AI (PERPLEXITY): Tuyệt đối KHÔNG dùng các từ nối đầu câu sáo rỗng của AI như: "Đầu tiên,", "Hơn nữa,", "Mặt khác,", "Ngoài ra,", "Thêm vào đó,", "Do đó,". Thay bằng cách vào thẳng vấn đề hoặc dùng các cụm giao tiếp mộc mạc: "Thực tế là", "Anh chị để ý sẽ thấy", "Bài toán ở đây là".
+4. TÍNH THỰC CHIẾN: Bổ sung 1 ví dụ thực tế hoặc 1 con số cụ thể làm minh chứng (nếu chủ đề cho phép). Tuyệt đối không nói sáo rỗng.
+5. KIỂM TRA XƯNG HÔ VÀ TỪ CẤM: Đảm bảo gọi khách hàng là "Anh chị". Giữ nguyên "chúng tôi". TUYỆT ĐỐI CẤM ký tự gạch chéo (Anh/Chị). Xóa các từ: Hành trình, khám phá, tuyệt vời, nâng tầm... Thay bằng từ ngữ dễ hiểu.
 
 KIỂM TRA GIỌNG ĐIỆU VÀ ĐỊNH DẠNG HÌNH ẢNH:
 🚫 Xóa hoặc làm nhẹ bất kỳ câu nào mang tính đe dọa, cảnh báo ép sợ hãi ("có đang bị...", "coi chừng...", "nguy hiểm...").
