@@ -229,8 +229,8 @@ YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn). 
    - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt, dễ quét bằng mắt (scan) trên màn hình điện thoại.
-3. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): Dựa vào Định mức Media (${spec.img} ảnh), trước phần Kết luận, BẮT BUỘC chèn một câu chuyển tiếp tự nhiên để "điều hướng mắt" anh em xuống hình ảnh:
-   - Nếu định mức là nhiều ảnh (ví dụ 1-3, 2-5...): Viết câu kích thích người đọc lướt xem album. (VD: "👉 Anh em lướt xem chi tiết mặt bằng và hình ảnh thực tế bên dưới...", "Chi tiết từng hạng mục anh em xem qua các ảnh sau...").
+3. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): CHỈ chèn câu điều hướng xem hình ảnh/video khi thực sự cần thiết (ví dụ: bài có hình ảnh thực tế công trình, ảnh feedback, bản vẽ). Các bài chia sẻ quan điểm, chuyên môn/lý thuyết thông thường KHÔNG CẦN câu điều hướng ảnh để tránh gượng ép. Nếu cần thiết thì:
+   - Nếu định mức là nhiều ảnh (ví dụ 1-3, 2-5...): Viết câu kích thích người đọc lướt xem album. (VD: "👉 Anh em lướt xem chi tiết bên dưới...").
    - Nếu định mức là 1 ảnh/video: "👉 Xem ngay hình ảnh/video thực tế bên dưới...".
    - Nếu là bài Điều hướng: "👉 Anh em click ngay vào link/hình bên dưới để xem chi tiết...".
    - Những phần cần nhấn mạnh, thay vị dùng Markdown thì thay bằng CHỮ IN HOA
