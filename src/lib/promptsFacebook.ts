@@ -244,11 +244,11 @@ YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn).
    - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt, dễ quét bằng mắt (scan) trên màn hình điện thoại.
 3. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
-   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Xóa sạch mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền ngu, bạc tóc, lừa đảo).
-   - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
-4. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): MẶC ĐỊNH KHÔNG ĐƯỢC chèn bất kỳ câu điều hướng nào (VD: 👉 Lướt xem hình bên dưới) để tránh gượng ép. CHỈ được phép chèn nếu người dùng chủ động yêu cầu trong bài hoặc nếu thuộc loại bài TESTIMONIAL/EVENT.
-4. KỶ LUẬT CTA: Lồng ghép [Mức độ CTA] một cách tự nhiên vào phần kết bài, đúng với tinh thần của loại bài này.
-5. THÔNG TIN LIÊN HỆ: LUÔN CHÈN chính xác khối thông tin sau ở cuối cùng (không sửa chữ nào):
+   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Tự động kiểm tra và XÓA SẠCH mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền oan, bạc tóc, lừa đảo).
+   - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng", "vẽ vời"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
+4. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): MẶC ĐỊNH KHÔNG ĐƯỢC chèn bất kỳ câu điều hướng nào (VD: 👉 Lướt xem hình bên dưới) để tránh gượng ép. NẾU TRONG BÀI Ở BƯỚC 3 ĐANG CÓ SẴN CÂU NÀY, BẠN PHẢI TỰ ĐỘNG XÓA NÓ ĐI. CHỈ được phép giữ lại/chèn thêm nếu bài thuộc loại TESTIMONIAL/EVENT hoặc người dùng chủ động yêu cầu đánh giá ảnh.
+5. KỶ LUẬT CTA: Lồng ghép [Mức độ CTA] một cách tự nhiên vào phần kết bài, đúng với tinh thần của loại bài này.
+6. THÔNG TIN LIÊN HỆ: LUÔN CHÈN chính xác khối thông tin sau ở cuối cùng (không sửa chữ nào):
 ---
 Công ty Cổ Phần Xây Nhà Tốc Độ
 Xây chất lượng - xây tận tâm

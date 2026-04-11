@@ -77,10 +77,11 @@ function getFrameworkPH(code: string): string {
 - Preview: Dẫn vào câu hỏi vote/thảo luận.`,
 
     TIPS:
-      `CÔNG THỨC: FAB + 4C (bài kinh nghiệm / bài học xương máu)
+      `CÔNG THỨC: FAB + 4C (bài kinh nghiệm / hướng dẫn tối ưu)
 - FAB cho từng điểm thực chiến:
-  + Feature (Phương pháp/Bước) → Advantage (Tại sao hiệu quả hơn cách thường làm) → Benefit (Anh em lời bao nhiêu hoặc tránh mất bao nhiêu).
-- 4C checklist: Clear (dễ hiểu ngay) | Concise (ngắn, không dài dòng) | Compelling (có yếu tố gây sốc/bất ngờ) | Credible (số liệu chứng minh).`,
+  + Feature (Phương pháp/Bước) → Advantage (Tại sao hiệu quả hơn) → Benefit (Anh em tối ưu được bao nhiêu tiền/thời gian).
+- TUYỆT ĐỐI không viết theo hướng than vãn "bài học xương máu/thất bại thảm hại". Hãy viết dưới góc độ "Giải pháp thông minh, tiết kiệm".
+- 4C checklist: Clear (dễ hiểu ngay) | Concise (ngắn gọn) | Compelling (bất ngờ tích cực) | Credible (số liệu chứng minh).`,
 
     ANALYSIS:
       `CÔNG THỨC: FAB + 4C (bài phân tích thị trường / góc nhìn)
@@ -230,9 +231,9 @@ YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn). 
    - Sử dụng bullet point (-) hoặc emoji (chọn lọc, không lạm dụng) để bài viết trông thoáng mắt, dễ quét bằng mắt (scan) trên màn hình điện thoại.
 3. KIỂM TRA LẠI GIỌNG ĐIỆU (QC CHECK LẦN CUỐI):
-   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Xóa sạch mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền ngu, bạc tóc, lừa đảo).
-   - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
-4. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): MẶC ĐỊNH KHÔNG ĐƯỢC chèn bất kỳ câu điều hướng nào (VD: 👉 Lướt xem hình bên dưới) để tránh gượng ép. CHỈ được phép chèn nếu người dùng chủ động yêu cầu trong bài hoặc nếu thuộc loại bài TESTIMONIAL/EVENT.
+   - Mở bài VÀ thân bài BẮT BUỘC hướng tới Giải pháp & Lợi ích. Tự động kiểm tra và XÓA SẠCH mọi từ ngữ đe dọa, tiêu cực (VD: mất tiền oan, bạc tóc, lừa đảo, lỗ sấp mặt).
+   - Xóa bỏ mọi từ ngữ có tính miệt thị, xách mé, công kích (ví dụ: "bọn nó", "tụi nó", "thằng", "vẽ vời"). Phải gọi là "đơn vị vận hành", "bên thứ ba", "nhà thầu".
+4. PHỐI HỢP VỚI MEDIA (HÌNH ẢNH/VIDEO): MẶC ĐỊNH KHÔNG ĐƯỢC chèn bất kỳ câu điều hướng nào (VD: 👉 Lướt xem hình bên dưới) để tránh gượng ép. NẾU TRONG BÀI Ở BƯỚC 3 ĐANG CÓ SẴN CÂU NÀY, BẠN PHẢI TỰ ĐỘNG XÓA NÓ ĐI. CHỈ được phép giữ lại/chèn thêm nếu bài thuộc loại TESTIMONIAL/EVENT hoặc người dùng chủ động yêu cầu đánh giá ảnh.
    - Những phần cần nhấn mạnh, thay vị dùng Markdown thì thay bằng CHỮ IN HOA
 4. KỶ LUẬT KẾT LUẬN: ĐOẠN CUỐI CÙNG (trước phần chữ ký) BẮT BUỘC phải bắt đầu bằng một trong ba cụm từ: "Tóm lại,", "Nhìn chung,", hoặc "Vậy nên," để đúc kết lại vấn đề cốt lõi nhất của bài.
 5. KỶ LUẬT CTA & CHỮ KÝ: Lồng ghép [Mức độ CTA] tự nhiên. LUÔN CHÈN chính xác khối thông tin sau ở cuối cùng (không sửa chữ nào):
