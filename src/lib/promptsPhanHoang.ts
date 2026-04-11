@@ -53,6 +53,85 @@ ${audience ? '\n[TỆP KHÁCH CỦA BÀI NÀY]: ' + audience : ''}
 CHỈ TRẢ VỀ NỘI DUNG ĐƯỢC YÊU CẦU. KHÔNG DẠ THƯA, KHÔNG GIẢI THÍCH.`.trim();
 }
 
+// ─── TỰ ĐỘNG CHỌN FRAMEWORK THEO LOẠI BÀI (PHAN HOÀNG) ──────────────────────
+function getFrameworkPH(code: string): string {
+  const map: Record<string, string> = {
+
+    MEME_TREND:
+`CÔNG THỨC: 4U + APP (bài chuyện nghề / bắt trend BĐS)
+- 4U cho HOOK: Câu đầu đủ Useful + Urgent + Unique + Ultra-specific (con số/tình huống cụ thể).
+- APP cho thân bài:
+  + Agree: Hoàng thấu hiểu cảm giác/tình huống anh em đang gặp.
+  + Promise: Góc nhìn thực chiến hoặc sự thật thú vị sẽ được chia sẻ.
+  + Preview: Hé lộ nội dung để kéo anh em đọc tiếp.`,
+
+    POLL:
+`CÔNG THỨC: APP (bài thảo luận / hỏi ý kiến)
+- Agree: Mở bằng 1 tình huống THỰC TẾ anh em ĐANG GẶP — Hoàng đồng cảm ngay.
+- Promise: Cam kết chia sẻ góc nhìn hoặc đúc kết sau khi thu thập ý kiến.
+- Preview: Dẫn vào câu hỏi vote/thảo luận.`,
+
+    TIPS:
+`CÔNG THỨC: FAB + 4C (bài kinh nghiệm / bài học xương máu)
+- FAB cho từng điểm thực chiến:
+  + Feature (Phương pháp/Bước) → Advantage (Tại sao hiệu quả hơn cách thường làm) → Benefit (Anh em lời bao nhiêu hoặc tránh mất bao nhiêu).
+- 4C checklist: Clear (dễ hiểu ngay) | Concise (ngắn, không dài dòng) | Compelling (có yếu tố gây sốc/bất ngờ) | Credible (số liệu chứng minh).`,
+
+    ANALYSIS:
+`CÔNG THỨC: FAB + 4C (bài phân tích thị trường / góc nhìn)
+- Mở bài: Luận điểm chính — 1 câu ngắn, sắc bén, gây tranh luận nếu có thể.
+- Thân bài FAB: Mỗi lý do/dữ liệu → Ưu điểm góc nhìn đó → Lợi ích cụ thể cho anh em đầu tư.
+- Kết: Hoàng đúc kết 1 câu + mời anh em tranh luận.
+- 4C: Clear | Concise | Compelling | Credible.`,
+
+    DEAL_CALL:
+`CÔNG THỨC: AIDA (bài gọi vốn / phân tích kèo đầu tư)
+- Attention: Kèo đầu tư cụ thể hoặc con số lợi nhuận hấp dẫn ngay đầu bài.
+- Interest: Vì sao kèo này khác biệt so với thị trường — số liệu, vị trí, tiềm năng.
+- Desire: Đã có ai làm chưa, kết quả ra sao (case thực tế nếu có).
+- Action: Cách tham gia/liên hệ cụ thể — 1 hành động duy nhất.`,
+
+    SERVICE_PITCH:
+`CÔNG THỨC: AIDA + FAB (bài giới thiệu giải pháp / dịch vụ)
+- Attention: Hook bằng kết quả đầu ra hoặc vấn đề nóng anh em đang gặp.
+- Interest + FAB: Giới thiệu giải pháp theo Feature → Advantage → Benefit thực tế.
+- Desire: Case hoặc số liệu chứng minh hiệu quả.
+- Action: 1 CTA rõ ràng.`,
+
+    TESTIMONIAL:
+`CÔNG THỨC: SSS – Star Story Solution (case study thực tế)
+- Star: Anh em đầu tư cụ thể (loại hình, quy mô, bối cảnh ban đầu).
+- Story: Hành trình — họ gặp vướng mắc gì, cảm xúc/quyết định như thế nào.
+- Solution: Hoàng và đội ngũ giải quyết ra sao + kết quả đo được bằng số cụ thể.`,
+
+    DIARY:
+`CÔNG THỨC: SSS + APP (nhật ký công trường / hành trình)
+- Agree: Mở bằng khoảnh khắc/cảm xúc thực tế Hoàng đang trải qua.
+- Star → Story → Solution: Kể thật, có điểm khó khăn và điểm đúc kết.
+- Preview/Kết: Gợi mở bài học hoặc điều tiếp theo.`,
+
+    TEAM_CULTURE:
+`CÔNG THỨC: SSS + APP (câu chuyện đội ngũ / anh em kỹ sư)
+- Agree: Thấu hiểu nỗi trăn trở của người thợ hoặc kỹ sư trẻ.
+- Star (nhân vật) → Story (hành trình thực tế) → Solution (bài học + kết quả).
+- Preview: Hé lộ văn hóa đội nhóm qua góc nhìn này.`,
+
+    REDIRECT:
+`CÔNG THỨC: 4U + AIDA rút gọn (bài kéo mem nhóm / dẫn link)
+- Hook 4U: Câu đầu đủ Useful + Urgent + Unique + Ultra-specific.
+- Body: 1–2 câu lý do anh em phải vào nhóm/click link ngay.
+- CTA: 1 câu duy nhất, link/chỉ dẫn rõ ràng.`,
+
+    EVENT:
+`CÔNG THỨC: 4U + AIDA (thông báo Livestream / Offline)
+- 4U cho tiêu đề: Cụ thể ngày giờ + ai nên tham gia + anh em sẽ NHẬN ĐƯỢC gì.
+- AIDA rút gọn: Lý do tham gia → Lợi ích thực tế → Đăng ký/Thả tim ngay.`
+  };
+
+  return map[code] || `CÔNG THỨC: PAS→BAB CÂN BẰNG
+- Problem (1 câu) → Agitate (1 câu) → Solution + After + Bridge (phần còn lại).`;
+}
+
 export function buildPrompt1PH(topic: string, contentTypeCode: string) {
   const spec = CONTENT_SPECS_PH[contentTypeCode];
   if (!spec) return '';
@@ -61,16 +140,16 @@ export function buildPrompt1PH(topic: string, contentTypeCode: string) {
 - Chủ đề: "${topic}"
 - Độ dài dự kiến: ${CAPTION_GUIDE[spec.caption]}
 
-YÊU CẦU:
-1. Xây dựng dàn ý theo công thức PAS→BAB CÂN BẰNG:
-   - Problem (1 câu): Nêu vấn đề/thách thức của nhà đầu tư — ngắn gọn, không từ ngữ đe dịa.
-   - Agitate (1 câu): Hậu quả nếu không hành động đúng cách — chỉ 1 câu, không khoét sâu.
-   - Solution + After (phần còn lại): Hoàng nhìn nhận vấn đề RA SAO → Giải pháp thực chiến là GÌ → Anh em đã thành công NHU THẼ NÀO.
-2. Các luận điểm phải gắn liền với KẾT QUẢ TÍCH CỰC: lợi nhuận đạt được, thu hồi vốn đúng tiến độ, cơ hội đầu tư cụ thể. Không chỉ liệt kê mất mát.
-3. Chèn từ khóa ngành (BĐS dòng tiền, CHDV, phòng trọ, ngộp, khoán thầu, PCCC, pháp lý) một cách tự nhiên.
+${getFrameworkPH(contentTypeCode)}
+
+YÊU CẦU BỔ SUNG:
+- Nội dung bám sát KẾT QUẢ TÍCH CỰC: lợi ích, cơ hội, thành công cụ thể. Không chỉ liệt kê mất mát.
+- Chèn từ khóa ngành (BĐS dòng tiền, CHDV, phòng trọ, ngộp, khoán thầu, PCCC, pháp lý) một cách tự nhiên.
+- Kiểm tra 4C: Clear | Concise | Compelling | Credible (số liệu chứng minh).
 
 Chỉ trả về văn bản phác thảo, chia đoạn rõ ràng. KHÔNG sinh hình ảnh.`.trim();
 }
+
 
 export function buildPrompt2PH(step1: string, contentTypeCode: string) {
   const spec = CONTENT_SPECS_PH[contentTypeCode];
