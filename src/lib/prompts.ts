@@ -227,6 +227,15 @@ CHỈ LẤY PHẦN "[BÀI VIẾT HOÀN CHỈNH]" và tối ưu theo CHECKLIST YO
 □ Subheading Spacing: Nếu có đoạn > 300 từ không có H2/H3 → chèn thêm tiêu đề phụ.
 □ Flesch Reading Ease: Câu ngắn, từ ngữ đời thường, tránh thuật ngữ phức tạp.
 
+━━━ VƯỢT QUA AI DETECTOR (CHỐNG MÁY MÓC) ━━━
+Để đảm bảo bài viết tự nhiên và không bị Google đánh giá là AI:
+✅ Bẻ gãy nhịp điệu (Burstiness): Viết lại câu theo cách diễn đạt linh hoạt hơn. Xen kẽ câu cực ngắn và dài. Tránh rập khuôn.
+✅ Thêm yếu tố con người: Bổ sung câu chuyện thực tế, ví dụ từ khách hàng, hoặc lời khuyên hữu ích của chuyên gia (Xây Nhà Tốc Độ).
+✅ Tăng tương tác: Dùng câu hỏi để người đọc phải suy nghĩ.
+✅ Từ khóa tự nhiên: KHÔNG nhồi nhét từ khóa (Keyword stuffing). Dùng từ khóa thuận theo ngữ cảnh.
+✅ Check lại bố cục: Nếu phần nào quá rập khuôn kiểu AI (mở bài luôn bằng "Hơn nữa", "Do đó"), hãy sắp xếp lại cách diễn đạt sáng tạo hơn.
+✅ CTA mạnh mẽ: Khuyến khích người đọc hành động rành mạch ở cuối bài.
+
 ━━━ HÀNH ĐỘNG BẮT BUỘC ━━━
 1. Sửa trực tiếp bài viết theo tất cả checklist trên.
 2. Tạo cấu trúc để người biên tập chèn link. TUYỆT ĐỐI KHÔNG liệt kê link ở mục Meta râu ria. Phải chèn trực tiếp vào văn bản bằng cấu trúc: "[Chèn link nội bộ bài viết về X tại đây]".
