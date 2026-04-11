@@ -1,27 +1,27 @@
 export const CONTENT_SPECS: Record<string, Record<string, string>> = {
-  MEME_TREND:    { label:"Nuôi tương tác – Giải trí / Meme / Bắt trend",   img:"1",   img_size:"1200x1200", video:"optional", caption:"short",       cta:"optional" },
-  POLL:          { label:"Nuôi tương tác – Hỏi ý kiến / Mini poll",         img:"1",   img_size:"1200x1200", video:"none",     caption:"short",       cta:"soft"     },
-  TIPS:          { label:"Giáo dục – Tips / How-to / Checklist",            img:"1-3", img_size:"1200x1200", video:"optional", caption:"medium_long", cta:"soft"     },
-  ANALYSIS:      { label:"Giáo dục – Phân tích / Góc nhìn cá nhân",        img:"1",   img_size:"1200x1200", video:"optional", caption:"long",        cta:"soft"     },
-  SALE_PRODUCT:  { label:"Bán hàng – Giới thiệu sản phẩm / dịch vụ",       img:"1-3", img_size:"1080x1350", video:"optional", caption:"medium",      cta:"required" },
-  SALE_PROMO:    { label:"Bán hàng – Khuyến mãi / Ưu đãi có deadline",     img:"1",   img_size:"1080x1350", video:"optional", caption:"medium",      cta:"required" },
-  TESTIMONIAL:   { label:"Bán hàng – Case study / Testimonial / Feedback",  img:"2-5", img_size:"1200x1200", video:"optional", caption:"long",        cta:"required" },
-  BRAND_STORY:   { label:"Thương hiệu – Câu chuyện / Hậu trường",          img:"2-4", img_size:"1200x1200", video:"optional", caption:"long",        cta:"soft"     },
-  BRAND_CULTURE: { label:"Thương hiệu – Văn hóa / Tuyển dụng",             img:"1-3", img_size:"1200x1200", video:"optional", caption:"medium",      cta:"soft"     },
-  REDIRECT:      { label:"Điều hướng – Dẫn về website / landing / blog",   img:"1",   img_size:"1200x630",  video:"none",     caption:"short",       cta:"required" },
-  EVENT:         { label:"Điều hướng – Thông báo sự kiện / livestream",    img:"1",   img_size:"1080x1350", video:"optional", caption:"short",       cta:"required" }
+  MEME_TREND: { label: "Nuôi tương tác – Giải trí / Meme / Bắt trend", img: "1", img_size: "1200x1200", video: "optional", caption: "short", cta: "optional" },
+  POLL: { label: "Nuôi tương tác – Hỏi ý kiến / Mini poll", img: "1", img_size: "1200x1200", video: "none", caption: "short", cta: "soft" },
+  TIPS: { label: "Giáo dục – Tips / How-to / Checklist", img: "1-3", img_size: "1200x1200", video: "optional", caption: "medium_long", cta: "soft" },
+  ANALYSIS: { label: "Giáo dục – Phân tích / Góc nhìn cá nhân", img: "1", img_size: "1200x1200", video: "optional", caption: "long", cta: "soft" },
+  SALE_PRODUCT: { label: "Bán hàng – Giới thiệu sản phẩm / dịch vụ", img: "1-3", img_size: "1080x1350", video: "optional", caption: "medium", cta: "required" },
+  SALE_PROMO: { label: "Bán hàng – Khuyến mãi / Ưu đãi có deadline", img: "1", img_size: "1080x1350", video: "optional", caption: "medium", cta: "required" },
+  TESTIMONIAL: { label: "Bán hàng – Case study / Testimonial / Feedback", img: "2-5", img_size: "1200x1200", video: "optional", caption: "long", cta: "required" },
+  BRAND_STORY: { label: "Thương hiệu – Câu chuyện / Hậu trường", img: "2-4", img_size: "1200x1200", video: "optional", caption: "long", cta: "soft" },
+  BRAND_CULTURE: { label: "Thương hiệu – Văn hóa / Tuyển dụng", img: "1-3", img_size: "1200x1200", video: "optional", caption: "medium", cta: "soft" },
+  REDIRECT: { label: "Điều hướng – Dẫn về website / landing / blog", img: "1", img_size: "1200x630", video: "none", caption: "short", cta: "required" },
+  EVENT: { label: "Điều hướng – Thông báo sự kiện / livestream", img: "1", img_size: "1080x1350", video: "optional", caption: "short", cta: "required" }
 };
 
 const CAPTION_GUIDE: Record<string, string> = {
-  short:       "rất ngắn: 1–3 câu, tối đa 80 ký tự",
-  medium:      "vừa: 4–8 câu, khoảng 100–250 từ, đoạn đầu < 125 ký tự",
+  short: "rất ngắn: 1–3 câu, tối đa 80 ký tự",
+  medium: "vừa: 4–8 câu, khoảng 100–250 từ, đoạn đầu < 125 ký tự",
   medium_long: "trung bình dài: 5–12 câu, 150–300 từ, chia 3–5 đoạn",
-  long:        "dài: 8–20 câu, 200–400 từ, chia đoạn 2–3 câu/đoạn"
+  long: "dài: 8–20 câu, 200–400 từ, chia đoạn 2–3 câu/đoạn"
 };
 
 const CTA_GUIDE: Record<string, string> = {
   required: "PHẢI có CTA rõ ràng, 1 hành động duy nhất (inbox / comment / gọi / link)",
-  soft:     "CTA nhẹ, khuyến khích tương tác: lưu bài, tag bạn, comment ý kiến",
+  soft: "CTA nhẹ, khuyến khích tương tác: lưu bài, tag bạn, comment ý kiến",
   optional: "Không cần CTA cứng, nếu có thì dạng câu hỏi tự nhiên"
 };
 
@@ -30,7 +30,7 @@ function getFrameworkFB(code: string): string {
   const map: Record<string, string> = {
 
     MEME_TREND:
-`CÔNG THỨC: 4U + APP (bài giải trí / bắt trend)
+      `CÔNG THỨC: 4U + APP (bài giải trí / bắt trend)
 - 4U cho HOOK: Tiêu đề phải đủ Useful (hữu ích) + Urgent (cần xem ngay) + Unique (độc đáo) + Ultra-specific (cụ thể số liệu/đối tượng).
 - APP cho thân bài:
   + Agree: Tỏ ra hiểu được cảm giác/tình huống của người đọc.
@@ -38,65 +38,65 @@ function getFrameworkFB(code: string): string {
   + Preview: Hé lộ nội dung để kéo người đọc tiếp.`,
 
     POLL:
-`CÔNG THỨC: APP (bài hỏi ý kiến / mini poll)
+      `CÔNG THỨC: APP (bài hỏi ý kiến / mini poll)
 - Agree: Mở bằng 1 tình huống/nhận định AI EM ĐỒNG CẢM ngay.
 - Promise: Cam kết sẽ nhận được góc nhìn hoặc câu trả lời gì đó thú vị.
 - Preview: Dẫn dắt vào câu hỏi thảo luận hoặc vote option.`,
 
     TIPS:
-`CÔNG THỨC: FAB + 4C (bài tips / how-to / checklist)
+      `CÔNG THỨC: FAB + 4C (bài tips / how-to / checklist)
 - FAB cho từng điểm mấu chốt:
   + Feature (Phương pháp/Bước) → Advantage (Ưu điểm/Khác biệt) → Benefit (Lợi ích THỰC TẾ cho chủ đầu tư bằng tiền hoặc thời gian).
 - TUYỆT ĐỐI không viết theo hướng than vãn hay đổ lỗi. Hãy viết dưới góc độ "Giải pháp thông minh, tiết kiệm".
 - 4C checklist (t tự kiểm tra): Clear (dễ hiểu) | Concise (ngắn gọn) | Compelling (hấp dẫn) | Credible (có số liệu chứng minh).`,
 
     ANALYSIS:
-`CÔNG THỨC: FAB + 4C (bài phân tích / góc nhìn)
+      `CÔNG THỨC: FAB + 4C (bài phân tích / góc nhìn)
 - Mở bài: Nêu luận điểm chính (điều cần chứng minh) — 1 câu sắc bén.
 - Thân bài FAB: Mỗi lý do/dữ liệu đều kết bằng lợi ích cụ thể cho Anh chị.
 - Kết bài: Đúc kết 1 câu súc tích + mời thảo luận.
 - 4C checklist: Clear | Concise | Compelling | Credible.`,
 
     SALE_PRODUCT:
-`CÔNG THỨC: AIDA (bài giới thiệu sản phẩm / dịch vụ)
+      `CÔNG THỨC: AIDA (bài giới thiệu sản phẩm / dịch vụ)
 - Attention: Hook đầu bài gây tò mò HOẶC nêu kết quả đầu ra ngay.
 - Interest: Lý do Anh chị nên quan tâm — kèm số liệu, điểm khác biệt so với thị trường.
 - Desire: Chứng minh bằng case thực tế, lợi ích cụ thể họ đạt được.
 - Action: 1 CTA duy nhất, rõ ràng: Inbox / Gọi / Đặt lịch.`,
 
     SALE_PROMO:
-`CÔNG THỨC: AIDA + Urgency (bài khuyến mãi / ưu đãi có deadline)
+      `CÔNG THỨC: AIDA + Urgency (bài khuyến mãi / ưu đãi có deadline)
 - Attention: Ưu đãi nổi bật + deadline rõ ràng ngay đầu bài.
 - Interest: Vì sao ưu đãi này có giá trị thực sự với Anh chị.
 - Desire: So sánh trước/sau, tiết kiệm bao nhiêu, nhận thêm gì.
 - Action: CTA gấp gáp, đếm ngược thời gian hoặc số lượng có hạn.`,
 
     TESTIMONIAL:
-`CÔNG THỨC: SSS – Star Story Solution (case study / feedback thực tế)
+      `CÔNG THỨC: SSS – Star Story Solution (case study / feedback thực tế)
 - Star: Giới thiệu khách hàng cụ thể (loại hình đầu tư, quy mô, bối cảnh).
 - Story: Hành trình — họ gặp khó khăn gì trước khi hợp tác với Xây Nhà Tốc Độ.
 - Solution: Xây Nhà Tốc Độ giải quyết như thế nào + kết quả đo được bằng số.`,
 
     BRAND_STORY:
-`CÔNG THỨC: SSS + APP (câu chuyện thương hiệu / hậu trường)
+      `CÔNG THỨC: SSS + APP (câu chuyện thương hiệu / hậu trường)
 - Agree: Mở bằng cảm xúc/tình huống gần gũi với người đọc.
 - Star → Story → Solution: Kể hành trình có điểm đầu (thách thức) và điểm cuối (thành công).
 - Preview: Ở cuối gợi mở thêm điều gì thú vị sẽ đến.`,
 
     BRAND_CULTURE:
-`CÔNG THỨC: APP (văn hóa / tuyển dụng)
+      `CÔNG THỨC: APP (văn hóa / tuyển dụng)
 - Agree: Thấu hiểu nỗi trăn trở của người lao động nghề nghiệp.
 - Promise: Cam kết môi trường / cơ hội họ sẽ được trải nghiệm.
 - Preview: Hé lộ 1 góc hậu trường độc đáo của đội ngũ.`,
 
     REDIRECT:
-`CÔNG THỨC: 4U + AIDA rút gọn (bài dẫn link)
+      `CÔNG THỨC: 4U + AIDA rút gọn (bài dẫn link)
 - Hook 4U: Câu đầu đủ Useful + Urgent + Unique + Ultra-specific.
 - Body: 1–2 câu Interest/Desire, lý do phải click ngay.
 - CTA: 1 câu duy nhất, link rõ ràng.`,
 
     EVENT:
-`CÔNG THỨC: 4U + AIDA (thông báo sự kiện / livestream)
+      `CÔNG THỨC: 4U + AIDA (thông báo sự kiện / livestream)
 - 4U cho tiêu đề: Cụ thể ngày giờ + đối tượng + điều gì họ sẽ NHẬN ĐƯỢC.
 - AIDA rút gọn: Nêu lý do tham gia → Lợi ích cụ thể → Đăng ký/Đặt reminder ngay.`
   };
@@ -264,7 +264,9 @@ ${step3}
 """
 
 YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
-1. KỶ LUẬT ĐỘ DÀI: Tuân thủ tuyệt đối [Giới hạn độ dài] đã giao. Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập, cắt tỉa lại cho gọn. Nếu quá ngắn, hãy làm rõ ý hơn nhưng tuyệt đối không lan man.
+[CẢNH BÁO QUAN TRỌNG NHẤT]: BẠN PHẢI GIỮ NGUYÊN GIỌNG ĐIỆU, NGÔN TỪ, VÀ CẢM XÚC CỦA BÀI VIẾT BƯỚC 3. TUYỆT ĐỐI KHÔNG REWRITE (viết lại) bài viết thành giọng văn máy móc, trang trọng hay mang hơi hướm AI. Nhiệm vụ của bạn chỉ là ngắt đoạn, thêm CTA, và định dạng.
+
+1. KỶ LUẬT ĐỘ DÀI: Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập cắt tỉa lại cho gọn nhưng GIỮ NGUYÊN VĂN PHONG. Nếu quá ngắn, hãy làm rõ ý hơn.
 2. ÉP BỐ CỤC MOBILE VÀ ĐỊNH DẠNG:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn).

@@ -250,7 +250,9 @@ ${step3}
 """
 
 YÊU CẦU ĐÓNG GÓI CHUẨN FACEBOOK:
-1. KỶ LUẬT ĐỘ DÀI: Tuân thủ tuyệt đối [Giới hạn độ dài] đã giao. Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập, cắt tỉa lại cho gọn. Nếu quá ngắn, hãy làm rõ ý hơn nhưng tuyệt đối không lan man.
+[CẢNH BÁO QUAN TRỌNG NHẤT]: BẠN PHẢI GIỮ NGUYÊN GIỌNG ĐIỆU CÁ NHÂN (VĂN NÓI), NGÔN TỪ ĐỜI THƯỜNG, VÀ CẢM XÚC CỦA BÀI VIẾT BƯỚC 3. TUYỆT ĐỐI KHÔNG REWRITE (viết lại) bài viết thành giọng văn máy móc, trang trọng hay mang hơi hướm AI. Nhiệm vụ của bạn chỉ là ngắt đoạn, thêm CTA, và định dạng.
+
+1. KỶ LUẬT ĐỘ DÀI: Nếu bài ở Bước 3 đang dài hơn quy định, hãy biên tập cắt tỉa lại cho gọn nhưng GIỮ NGUYÊN VĂN PHONG. Nếu quá ngắn, hãy làm rõ ý hơn.
 2. ÉP BỐ CỤC MOBILE VÀ ĐỊNH DẠNG:
    - Hook (3 dòng đầu) phải cực bén, kết thúc bằng việc xuống dòng để tạo khoảng nghỉ.
    - Thân bài phải chia đoạn cực ngắn (tối đa 2-3 câu/đoạn). 
