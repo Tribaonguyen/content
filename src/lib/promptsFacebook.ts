@@ -46,8 +46,9 @@ function getFrameworkFB(code: string): string {
     TIPS:
 `CÔNG THỨC: FAB + 4C (bài tips / how-to / checklist)
 - FAB cho từng điểm mấu chốt:
-  + Feature (Phương pháp/Bước) → Advantage (Ưu điểm/Khác biệt) → Benefit (Lợi ích THỰC TẾR cho chủ đầu tư bằng tiền hoặc thời gian).
-- 4C checklist (tự kiểm tra): Clear (dễ hiểu) | Concise (ngắn gọn) | Compelling (hấp dẫn) | Credible (có số liệu chứng minh).`,
+  + Feature (Phương pháp/Bước) → Advantage (Ưu điểm/Khác biệt) → Benefit (Lợi ích THỰC TẾ cho chủ đầu tư bằng tiền hoặc thời gian).
+- TUYỆT ĐỐI không viết theo hướng than vãn hay đổ lỗi. Hãy viết dưới góc độ "Giải pháp thông minh, tiết kiệm".
+- 4C checklist (t tự kiểm tra): Clear (dễ hiểu) | Concise (ngắn gọn) | Compelling (hấp dẫn) | Credible (có số liệu chứng minh).`,
 
     ANALYSIS:
 `CÔNG THỨC: FAB + 4C (bài phân tích / góc nhìn)
