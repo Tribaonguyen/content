@@ -1,0 +1,50 @@
+[debug] [2026-04-09T13:56:18.972Z] ----------------------------------------------------------------------
+[debug] [2026-04-09T13:56:18.973Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-04-09T13:56:18.973Z] CLI Version:   15.13.0
+[debug] [2026-04-09T13:56:18.973Z] Platform:      win32
+[debug] [2026-04-09T13:56:18.974Z] Node Version:  v20.11.1
+[debug] [2026-04-09T13:56:18.974Z] Time:          Thu Apr 09 2026 20:56:18 GMT+0700 (Giờ Đông Dương)
+[debug] [2026-04-09T13:56:18.974Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Admin\.gemini\antigravity\scratch\ai-content-studio
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-04-09T13:56:30.005Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-09T13:56:30.005Z] > authorizing via signed-in user (tribaonguyen.379@gmail.com)
+[debug] [2026-04-09T13:56:30.006Z] Checked if tokens are valid: true, expires at: 1775746122205
+[debug] [2026-04-09T13:56:30.007Z] Checked if tokens are valid: true, expires at: 1775746122205
+[debug] [2026-04-09T13:56:30.008Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/single-shadow-245914 [none]
+[debug] [2026-04-09T13:56:30.599Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/single-shadow-245914 200
+[debug] [2026-04-09T13:56:30.599Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/single-shadow-245914 {"projectId":"single-shadow-245914","projectNumber":"1035697714713","displayName":"google Assistant - Baopc","name":"projects/single-shadow-245914","resources":{"hostingSite":"single-shadow-245914"},"state":"ACTIVE","etag":"1_b3128979-47b1-4a6d-badb-9d70d967c19c"}
+[info] i  Using project single-shadow-245914 (google Assistant - Baopc) . 
+[info] 
+=== Hosting Setup
+[info] 
+[debug] [2026-04-09T13:57:40.224Z] Checked if tokens are valid: true, expires at: 1775746122205
+[debug] [2026-04-09T13:57:40.224Z] Checked if tokens are valid: true, expires at: 1775746122205
+[debug] [2026-04-09T13:57:40.225Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/single-shadow-245914 [none]
+[debug] [2026-04-09T13:57:40.923Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/single-shadow-245914 200
+[debug] [2026-04-09T13:57:40.923Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/single-shadow-245914 {"projectId":"single-shadow-245914","projectNumber":"1035697714713","displayName":"google Assistant - Baopc","name":"projects/single-shadow-245914","resources":{"hostingSite":"single-shadow-245914"},"state":"ACTIVE","etag":"1_b3128979-47b1-4a6d-badb-9d70d967c19c"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

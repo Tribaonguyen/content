@@ -52,21 +52,21 @@ function getFrameworkFB(code: string): string {
     ANALYSIS:
 `CÔNG THỨC: FAB + 4C (bài phân tích / góc nhìn)
 - Mở bài: Nêu luận điểm chính (điều cần chứng minh) — 1 câu sắc bén.
-- Thân bài: Phân tích theo FAB — mỗi lý do/dữ liệu đều kết bằng lợi ích cụ thể cho Anh/Chị.
+- Thân bài FAB: Mỗi lý do/dữ liệu đều kết bằng lợi ích cụ thể cho Anh chị.
 - Kết bài: Đúc kết 1 câu súc tích + mời thảo luận.
 - 4C checklist: Clear | Concise | Compelling | Credible.`,
 
     SALE_PRODUCT:
 `CÔNG THỨC: AIDA (bài giới thiệu sản phẩm / dịch vụ)
 - Attention: Hook đầu bài gây tò mò HOẶC nêu kết quả đầu ra ngay.
-- Interest: Lý do Anh/Chị nên quan tâm — kèm số liệu, điểm khác biệt so với thị trường.
+- Interest: Lý do Anh chị nên quan tâm — kèm số liệu, điểm khác biệt so với thị trường.
 - Desire: Chứng minh bằng case thực tế, lợi ích cụ thể họ đạt được.
 - Action: 1 CTA duy nhất, rõ ràng: Inbox / Gọi / Đặt lịch.`,
 
     SALE_PROMO:
 `CÔNG THỨC: AIDA + Urgency (bài khuyến mãi / ưu đãi có deadline)
 - Attention: Ưu đãi nổi bật + deadline rõ ràng ngay đầu bài.
-- Interest: Vì sao ưu đãi này có giá trị thực sự với Anh/Chị.
+- Interest: Vì sao ưu đãi này có giá trị thực sự với Anh chị.
 - Desire: So sánh trước/sau, tiết kiệm bao nhiêu, nhận thêm gì.
 - Action: CTA gấp gáp, đếm ngược thời gian hoặc số lượng có hạn.`,
 
@@ -113,7 +113,7 @@ export function getSystemPromptFB(audience: string, knowledgeBase?: string) {
 
 [BRAND VOICE - BỘ GEN THƯƠNG HIỆU]
 - Hình mẫu: Người Chỉ Huy Đáng Tin Cậy (Kỷ luật, nói được làm được) + Chuyên Gia Cố Vấn (Bao quát rủi ro, tối ưu tài chính).
-- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách hàng → "Anh chị". TUYỆT ĐỐI KHÔNG xưng "em", "mình", "bạn".
+- Xưng hô: Công ty → "Xây Nhà Tốc Độ" / "chúng tôi" / "đội ngũ kỹ sư". Khách hàng → viết "Anh chị" (KHÔNG dùng gạch chéo "Anh/Chị"). TUYỆT ĐỐI KHÔNG xưng "em", "mình", "bạn".
 - Giọng văn: Thân thiện, gần gũi, vui vẻ — như người bạn chuyên môn đang tư vấn thật lòng. Trực diện nhưng không quá gắt. Dùng con số thực tế bám sát chủ đề. KHÔNG nói đạo lý, KHÔNG hoa mỹ, KHÔNG cảnh báo đe dọa.
 - Cam kết cốt lõi: Không phát sinh chi phí | Đúng tiến độ | Chuẩn pháp lý PCCC.
 - TUYỆT ĐỐI KHÔNG lặp lại số liệu, ví dụ, hoặc case study đã dùng ở bài trước. Mỗi bài viết PHẢI có dữ liệu và góc nhìn độc lập bám sát chủ đề.
@@ -167,9 +167,12 @@ ${step1}
 
 YÊU CẦU:
 1. Viết lại bản nháp trên, đắp thêm "thịt" cho các ý. Độ dài theo chuẩn: ${CAPTION_GUIDE[spec.caption]}
-2. 3 DÒNG ĐẦU TIÊN (HOOK) phải cực "bén". Đánh trúng tim đen hoặc sự tò mò của nhà đầu tư.
-   (Gợi ý Hook: Dùng câu hỏi sắc bén, hoặc đưa ra một sự thật trần trụi trong ngành thầu xây dựng).
-3. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng vấn đề!
+2. 3 DÒNG ĐẦU TIÊN (HOOK) phải thu hút ngay. Gợi ý:
+   - Nêu một LỢI ÍCH BẤT NGỜ hoặc CƠ HỘI mà nhiều Anh chị đang bỏ lỡ.
+   - Đặt 1 câu hỏi khơi gợi sự tò mò hoặc đồng cảm (KHÔNG phải câu hỏi chỉ lỗi hay đe dọa).
+   - Hoặc dùng kết quả thực tế trước: "Anh chị X đã ...", sau đó mới hỏi "Anh chị muốn làm được như vậy không?".
+3. Tuyệt đối không dùng những câu mở bài sáo rỗng kiểu "Trong thời đại hiện nay...". Vào thẳng giá trị!
+4. KIỂM TRA XƯNG NGÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) bằng "Anh chị" (không gạch chéo).
 
 Chỉ trả về văn bản nội dung.`.trim();
 }
@@ -184,15 +187,20 @@ ${step2}
 """
 
 YÊU CẦU ÉP KHUÔN:
-1. Đóng vai một kỹ sư trưởng đang ngồi tư vấn trực tiếp với chủ đầu tư.
+1. Đóng vai một kỹ sư trưởng đang ngồi tư vấn thân thiện với chủ đầu tư — vui vẻ, gần gũi, không gắt.
 2. CẮT GỌN CÂU: Không để câu quá dài. Cứ 15-20 chữ phải ngắt nhịp hoặc chấm câu.
-3. THÊM TÍNH THỰC CHIẾN: Bổ sung 1 ví dụ thực tế, 1 con số cụ thể, hoặc 1 bài học xương máu trên công trường (nếu chủ đề cho phép).
-4. Kiểm tra và XÓA SẠCH các từ cấm: Hành trình, khám phá, tuyệt vời, nâng tầm... Thay bằng các động từ mạnh, dứt khoát.
+3. THÊM TÍNH THỰC CHIẾN: Bổ sung 1 ví dụ thực tế hoặc 1 con số cụ thể làm minh chứng (nếu chủ đề cho phép).
+4. Kiểm tra và XÓA SẠCH các từ cấm: Hành trình, khám phá, tuyệt vời, nâng tầm... Thay bằng ngôn ngữ đời thường, cụ thể.
+5. KIỂM TRA XƯNG HÔ: Thay TOÀN BỘ "Anh/Chị" (có gạch chéo) → "Anh chị". Giữ nguyên "chúng tôi".
+
+KIỂM TRA GIỌNG ĐIỆU:
+🚫 Xóa hoặc làm nhẹ bất kỳ câu nào mang tính đe dọa, cảnh báo ép sợ hãi ("có đang bị...", "coi chừng...", "nguy hiểm...").
+✅ Thay bằng giọng tích cực: lợi ích đạt được, cơ hội, kết quả thực tế.
 
 KIỂM TRA CHẤT LƯỢNG 4C TRƯỚC KHI TRẢ VỀ:
 ✅ Clear – Mỗi câu đọc 1 lần là hiểu ngay, không mơ hồ.
 ✅ Concise – Không câu nào thừa. Cắt bỏ nếu xóa đi bài vẫn đủ nghĩa.
-✅ Compelling – Có ít nhất 1 yếu tố kéo cảm xúc: con số bất ngờ, tình huống thực tế, hoặc câu hỏi nhức nhối.
+✅ Compelling – Có ít nhất 1 yếu tố tạo cảm xúc tích cực: con số ấn tượng, kết quả thực tế, câu hỏi gợi mở.
 ✅ Credible – Có ít nhất 1 con số/dữ liệu cụ thể làm bằng chứng.
 
 Chỉ trả về văn bản bài viết đã được thổi hồn.`.trim();
