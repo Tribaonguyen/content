@@ -36,11 +36,12 @@ export interface ArticleTask {
 /* =====================================================
    ICON COMPONENT  (using Material Symbols)
 ===================================================== */
-function Icon({ name, className = '', filled = false, size = 24 }: {
+function Icon({ name, className = '', filled = false, size = 24, style }: {
   name: string;
   className?: string;
   filled?: boolean;
   size?: number;
+  style?: React.CSSProperties;
 }) {
   return (
     <span
@@ -50,6 +51,7 @@ function Icon({ name, className = '', filled = false, size = 24 }: {
         fontVariationSettings: filled
           ? "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24"
           : "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24",
+        ...style,
       }}
     >
       {name}
