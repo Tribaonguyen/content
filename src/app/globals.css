@@ -1,26 +1,173 @@
 @import "tailwindcss";
 
+/* =============================================
+   NEURAL STUDIO — GLOBAL DESIGN SYSTEM
+   Material Design 3 + Glassmorphism
+   ============================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* === MD3 Color Tokens === */
+  --primary: #306277;
+  --primary-container: #4a7b91;
+  --primary-fixed: #bee9ff;
+  --primary-fixed-dim: #9ccde6;
+  --on-primary: #ffffff;
+  --on-primary-container: #fbfdff;
+  --on-primary-fixed: #001f2a;
+  --on-primary-fixed-variant: #154c61;
+  --inverse-primary: #9ccde6;
+
+  --secondary: #465f89;
+  --secondary-container: #b7cfff;
+  --secondary-fixed: #d6e3ff;
+  --secondary-fixed-dim: #afc7f7;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #405882;
+  --on-secondary-fixed: #001b3e;
+  --on-secondary-fixed-variant: #2e4770;
+
+  --tertiary: #934700;
+  --tertiary-container: #b85b03;
+  --tertiary-fixed: #ffdcc7;
+  --tertiary-fixed-dim: #ffb787;
+  --on-tertiary: #ffffff;
+  --on-tertiary-container: #fffbff;
+  --on-tertiary-fixed: #311300;
+  --on-tertiary-fixed-variant: #733600;
+
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+
+  --background: #f9f9ff;
+  --on-background: #181c22;
+  --surface: #f9f9ff;
+  --surface-bright: #f9f9ff;
+  --surface-dim: #d8dae3;
+  --surface-variant: #e0e2ec;
+  --surface-tint: #32647a;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f2f3fd;
+  --surface-container: #ecedf7;
+  --surface-container-high: #e6e8f1;
+  --surface-container-highest: #e0e2ec;
+  --on-surface: #181c22;
+  --on-surface-variant: #414753;
+  --inverse-surface: #2d3038;
+  --inverse-on-surface: #eff0fa;
+  --outline: #717785;
+  --outline-variant: #c1c6d5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* === Base Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--on-surface);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+/* === Material Icons === */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  user-select: none;
+  vertical-align: middle;
+}
+
+/* === Glassmorphism Utilities === */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* === Animations === */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.5s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.35s ease-out forwards;
+}
+
+/* === Scrollbar Styling === */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-container-low);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--outline);
+}
+
+/* === Focus Visible === */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* === Selection === */
+::selection {
+  background: rgba(48, 98, 119, 0.18);
+  color: var(--on-surface);
 }
